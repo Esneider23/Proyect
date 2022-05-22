@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
 const controller = require('../controllers/controllers');
 const {isAuthenticated} = require('../helpers/auth')
 
@@ -8,7 +7,16 @@ router.get('/signin', (req,res)=>{
     res.render('signin')
 })
 
-router.get('/signup', isAuthenticated, (req,res)=>{
+router.get('/signinC', (req,res)=>{
+    res.render('signinC')
+})
+
+
+router.get('/signupCl', (req,res)=>{
+    res.render('signupc');
+})
+
+router.get('/signupAd', isAuthenticated, (req,res)=>{
     res.render('signup');
 })
 
@@ -19,7 +27,8 @@ router.get('/logout', (req,res)=>
 })
 
 
-
-router.post('/signup', controller.Signup);
 router.post('/signin', controller.Signin);
+router.post('/signinC', controller.SigninC);
+router.post('/signupAd', controller.Signup);
+router.post('/signupCl', controller.Signup);
 module.exports = router;
