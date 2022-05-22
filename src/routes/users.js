@@ -11,6 +11,12 @@ router.get('/signup', (req,res)=>{
     res.render('signup');
 })
 
+router.get('/logout', (req,res)=>
+{
+    req.logout();
+    res.redirect('/');
+})
+
 router.post('/signup', controller.Signup);
 router.post('/signin', controller.Signin);
 module.exports = router;

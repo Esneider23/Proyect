@@ -1,37 +1,43 @@
-const passport = require('passport');
-const LocalStrategy = require('passport-local');
+const passport = require("passport");
+const LocalStrategy =  require("passport-local").Strategy;
+
 const User = require('../models/User');
 
-passport.use(new LocalStrategy({
-    usernameFiled: 'email',
-}, async (email, passport, done)=>{
-    const user = await User.findOne({email: email});
-    if(!user)
-    {
-        return done(null, false, {message: 'Usuario no existe'});
-    }
-    else
-    {
-       const match = await user.mathPassword(password);
-       if(match)
-       {
-           return done(null,user);
-       }
-       else{
-           return done(null, false, {message: 'Contraseña errada'})
-       }
-    }
-}));
+passport.use(new LocalStrategy(function(email,password,done){
+  if(email === "Esneider@gmail.com" && password === "12345" )
+  {
+    return done(null, {id:1, name:"Cody"});
+  }
+}))
 
-passport.serializeUser((user, done) =>
-{
-    done(null, user.id);
-})
+/* passport.use(new LocalStrategy({
+  usernameField: "email",
+}, async (email, password, done) => {
+      // Match Email's User
+      const user = await User.findOne({ email: email });
+      if (!user) {
+        return done(null, false, { message: "Not User found." });
+      } else {
+        // Match Password's User
+        const match = await user.matchPassword(password);
+        if (match) {
+          return done(null, user);
+        } else {
+          return done(null, false, { message: "Incorrect Password." });
+        }
+      }
+    }
+  )
+); */
+    
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
 
 passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user)=>{
-        done(err, user);
-    })
-})
+  User.findById(id, (err, user) => {
+    done(err, user);
+  });
+});
 
 module.exports = passport;

@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
 
 //Middlewares
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(session({
     secret:'mysecretapp',
