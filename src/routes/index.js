@@ -12,8 +12,9 @@ router.get('/rutas',(req,res)=>{
    
 })
 
-router.get('/index',isAuthenticated,(req,res)=>{ 
-    
+router.get('/index', isAuthenticated, (req,res)=>{ 
+    res.render('index');
 }) 
+
 
 module.exports = router;
