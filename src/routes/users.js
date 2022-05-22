@@ -16,9 +16,9 @@ router.get('/signupCl', (req,res)=>{
     res.render('signupc');
 })
 
-/*router.get('/signupAd', isAuthenticated, (req,res)=>{
+router.get('/signupAd', isAuthenticated, (req,res)=>{
     res.render('signup');
-})*/
+})
 
 router.get('/logout', (req,res)=>
 {
