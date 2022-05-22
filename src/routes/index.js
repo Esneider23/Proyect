@@ -20,4 +20,8 @@ router.get('/indexC', isAuthenticated, (req,res)=>{
     res.render('indexC');
 }) 
 
+router.get('/Usuarios', isAuthenticated, (req,res)=>{ 
+    res.render('Usuarios');
+}) 
+
 module.exports = router;
