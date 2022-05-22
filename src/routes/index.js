@@ -15,9 +15,7 @@ router.get('/rutas',(req,res)=>{
     res.render('rutas')
 })
 
-router.get('/signin', (req,res)=>{
-    res.render('inicio_seccion');
-})
+
 
 
 
