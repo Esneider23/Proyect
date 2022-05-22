@@ -8,8 +8,7 @@ router.get('/',(req,res)=>{
 })
 
 router.get('/rutas',(req,res)=>{
-    
-   
+    res.render('rutas');
 })
 
 router.get('/index', isAuthenticated, (req,res)=>{ 

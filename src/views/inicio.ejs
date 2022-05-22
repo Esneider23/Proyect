@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,102 +9,119 @@
   <link rel="stylesheet" href="resources/css/barranav.css">
   <link rel="stylesheet" href="resources/css/footer.css">
   <link rel="stylesheet" href="resources/css/inicio.css">
-  <link rel="icon" href="resources/img/Logo.png">
+  <link rel="icon" href="resources/img/Logo3.png">
 </head>
 
 <body>
   <nav>
     <div id="nav-container">
       <a href="/">
-        <img id="nav-logo" src="resources/img/Logo2.png" alt="" width="30" height="24">
+        <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="30" height="24">
       </a>
 
-      <div id="nav-right">
-        <a id="nav-botton" href="/">
-          Inicio
-        </a>
-        <a id="nav-botton" href="/rutas">
+      <div class="nav-right">
+        <div id="actual-page">
+          <a class="nav-botton" href="/">
+            Inicio
+          </a>
+        </div>
+        <a class="nav-botton" href="/rutas">
           Rutas
         </a>
-        <a id="nav-botton" href="/signinC">
+        <a class="nav-botton" href="/signinC">
           Clientes
         </a>
-
-        <a id="nav-botton" href="/signin">
+        <a class="nav-botton" href="/signin">
           Colaboradores
         </a>
-        <a id="nav-botton" href="/signupCl">
+        <a class="nav-botton" href="/signupCl">
           Registrarse
         </a>
       </div>
     </div>
   </nav>
- 
+  
   <div class="carousel">
-    <div class="carousel__item">Content#1</div>
-    <div class="carousel__item">Content#2</div>
-    <div class="carousel__item">Content#3</div>
+    <div class="carousel__item" id="carousel_1"><h2 class="title_carousel">Los Mejores viajes</h2></div>
+    <div class="carousel__item" id="carousel_2"><h2 class="title_carousel">Cartagena</h2></div>
+    <div class="carousel__item" id="carousel_3"><h2 class="title_carousel">Medellin</h2></div>
   </div>
   <script src="resources/css/inicio.js"></script>
- 
- 
- 
-  <!--
-   <footer>
-     <container>
-       <seccion id="seccion1">
-         <img src="resources/img/Logo2.png" alt="Logo">
-         <p>
-           Buses S.A. Empresa de servico de transporte de buces desde hace muchos años.
-          </p>
-          <p>
-          Vigilado Super intendencia de transporte y el gobierno ncional.
-        </p>
-        <ul class="social-icons" id="ul_footer">
-          <li class="icon" id="li_footer"><a href="click"><img src="resources/img/facebook.png" alt="Logo de facebook"
-                class="icon_logo" width="30px"></img></a></li>
-          <li class="icon" id="li_footer"><a href="click"><img src="resources/img/instagram.png" alt="Logo de Instagram"
-                class="icon_logo" width="30px"></img></a></li>
-          <li class="icon" id="li_footer"><a href="click"><img src="resources/img/twitter.png" alt="Logo de twitter"
-                class="icon_logo" width="30px"></img></a></li>
-        </ul>
-      </seccion>
-      <seccion id="seccion2">
-        <h2><b>Contacto</b></h2>
-        <p>Atencion al cliente:
-          655332773
-          3008666628 - 3118948832
-          atencionbuses@buses.com
-          
-          Contacto negocios:
-          848999390
-          311777788 - 317784888888
-          negociosbusesas@buses.com
-        </p>
-      </seccion>
-      <seccion id="seccion3">
-        <h2><b>Donde estamos</b></h2>
-        <p>Colombia - Cartagena.
-          Transersal 99 - Avenida Sherman
-          Wallaby 72
-          
-          Colombia - Bogota.
-          Cra.#78-34 San Fernando - 31
+  
 
-          Colombia - Cali.
-          Cra.#81-33 al frente de la casa
-          de carlos.
-        </p>
-      </seccion>
-      <seccion id="seccion4">
-        <h2><b>Redes Sociales</b></h2>
-        <p>Facebook: Buses SA
-          Intagram: @Buses_SA
-          twitter: @Buses_SA
-        </p>
-      </seccion>
-    </container>
+
+
+
+  <footer>
+    <seccion id="seccion1">
+      <img src="resources/img/Logo3.png" alt="Logo">
+      <p>
+        Buses S.A. Empresa de servico de transporte de buces desde hace muchos años.
+      </p>
+      <p>
+        Vigilado Super intendencia de transporte y el gobierno ncional.
+      </p>
+      <ul id="ul-footer">
+        <li class="li-footer" ><a href="click">
+            <img src="resources/img/facebook.png" alt="Logo de facebook" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="click">
+            <img src="resources/img/instagram.png" alt="Logo de Instagram" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="click">
+            <img src="resources/img/twitter.png" alt="Logo de twitter" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="click">
+            <img src="resources/img/whattsap.png" alt="Logo de twitter" class="icon_social_media">
+          </a>
+        </li>
+      </ul>
+    </seccion>
+    <seccion id="seccion2">
+      <h3 class="footer_title"><b>Contacto</b></h3>
+      <p>Atencion al cliente: <br>
+        655332773 <br>
+        3008666628 - 3118948832 <br>
+        atencionbuses@buses.com <br>
+      </p>
+      <p>
+        Contacto negocios: <br>
+        848999390 <br>
+        311777788 - 317784888888 <br>
+        negociosbusesas@buses.com
+      </p>
+    </seccion>
+    <seccion id="seccion3">
+      <h3 class="footer_title"><b>Donde estamos</b></h3>
+      <p>Colombia - Cartagena. <br>
+        Transersal 99 - Avenida Sherman <br>
+        Wallaby 72 <br>
+      </p>
+      <p>
+        Colombia - Bogota.
+        Cra.#78-34 San Fernando - 31 <br>
+      </p>  
+      <p>
+        Colombia - Cali. <br>
+        Cra.#81-33 al frente de la casa <br>
+        de carlos.
+      </p>
+    </seccion>
+    <seccion id="seccion4">
+      <h3 class="footer_title"><b>Redes Sociales</b></h3>
+      <p>Facebook: Buses SA <br>
+        Intagram: @Buses_SA <br>  
+        twitter: @Buses_SA
+      </p>
+    </seccion>
+    <div class="clearfix"></div> 
   </footer>
--->
 </body>
+
 </html>
