@@ -18,5 +18,20 @@
 				</form>
 			</div>
 	</div>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+    <%if(typeof alert != "undefined"){%>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text:'<%= alertMessage %>',
+                icon:'<%= alertIcon  %>',
+                showConfirmButton:'<%= ShowConfirmButton  %>',
+                timer:'<%= timer %>'
+            }).then(()=>{
+                window.location='/<%= ruta  %>'
+            })
+        </script>
+    <%}%>
 </body>
 </html>

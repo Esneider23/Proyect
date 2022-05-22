@@ -3,32 +3,29 @@ const LocalStrategy =  require("passport-local").Strategy;
 
 const User = require('../models/User');
 
-passport.use(new LocalStrategy(function(email,password,done){
-  if(email === "Esneider@gmail.com" && password === "12345" )
-  {
-    return done(null, {id:1, name:"Cody"});
-  }
-}))
-
-/* passport.use(new LocalStrategy({
-  usernameField: "email",
-}, async (email, password, done) => {
-      // Match Email's User
-      const user = await User.findOne({ email: email });
-      if (!user) {
-        return done(null, false, { message: "Not User found." });
-      } else {
-        // Match Password's User
-        const match = await user.matchPassword(password);
-        if (match) {
-          return done(null, user);
-        } else {
-          return done(null, false, { message: "Incorrect Password." });
-        }
-      }
+passport.use('local-signin', new LocalStrategy({
+  usernameField: 'email',
+  passwordField: 'password',
+  passReqToCallback: true
+}, function(req,email,password,done)
+{
+  User.findOne({'email': email},
+  function(err,user){
+    if(err)
+    {
+      return done(err);
     }
-  )
-); */
+    if(!user)
+    {
+      return done(null, false, { message: "Not User found." });
+    }
+    if(!user.matchPassword(password))
+    {
+      return done(null, false, { message: "Incorrect Password." });
+    }
+    return done(null, user)
+  })
+}))
     
 passport.serializeUser((user, done) => {
   done(null, user.id);
