@@ -20,14 +20,6 @@ app.use('/resources', express.static('public'));
 app.use('/resources', express.static(__dirname + '/public'));
 
 
-mongoose.connect(config.db, (err, res)=>{
-    if(err)
-    {
-        return console.log(`Error al conectar la base de datos:${err}`)
-    }
-    return console.log("conexion exitosa!");
-})
-
 app.listen(config.port, () => {
     console.log(`Server corriendo en http://localhost:${config.port}`);
 })

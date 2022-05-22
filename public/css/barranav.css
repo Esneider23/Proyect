@@ -8,9 +8,14 @@ nav  {
     line-height: 56px;
 }
 
-.nav-container {
-    padding: 0px 70px 0px 70px;
+#nav-container {
+    margin: 0px 70px 0px 70px;
+    height: 56px;
+    z-index: 0;
 }
+
+
+
 
 #nav-right {
     list-style-type: none;
@@ -22,7 +27,7 @@ nav  {
 
 #nav-botton {
     text-decoration: none;
-    padding: 0px 15px 0px 15px;
+    margin: 0px 15px 0px 15px;
     color: white;
 }
 
@@ -32,7 +37,12 @@ nav  {
     width: auto;
 }
 
-#registro {
-    background-color: cornflowerblue;
-    border-radius: 50px;
+.registro {
+    /*height: 30px;
+    width: 100px;*/
+    background-color: skyblue;
+    border-radius: 9px;    
+    float: right;
+    z-index: -1;
+    
 }
