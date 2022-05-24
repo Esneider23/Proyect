@@ -20,4 +20,8 @@ router.get('/Usuarios', isAuthenticated, (req,res)=>{
     res.render('Usuarios');
 }) 
 
+router.get('/hola', isAuthenticated,(req,res)=>
+{
+    res.send("Mundo");
+})
 module.exports = router;

@@ -17,9 +17,9 @@ exports.Signup = async (req, res)=>{
     console.log(newUser);
 }   
 
-exports.Signin = passport.authenticate('local-signin',
-{
-    successRedirect:"/index",
-    failureRedirect: '/signin',
+exports.Signin = passport.authenticate('local-signin', {
+    successRedirect: '/index',
+    failureRedirect: '/signin'
 });
+
 
