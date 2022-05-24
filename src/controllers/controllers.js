@@ -9,28 +9,11 @@ exports.Signup = async (req, res)=>{
    const emailUser = await User.findOne({email:email});
    if(emailUser)
    {
-    res.render('signupc',{
-        alert:true,
-        alertTitle: "Error",
-        alertMessage: "Error al registrar el usuario",
-        alertIcon: 'error',
-        ShowConfirmButton:true,
-        timer: '',
-        ruta:'signupCl'
-    })
-    }
+       res.redirect("/signup")
+   }
     const newUser = new User({name, email, password,typ});
     newUser.password =  await newUser.encryptPassword(password);
     await newUser.save();
-    res.render('signupc',{
-        alert:true,
-        alertTitle: "Registration",
-        alertMessage: "Successful Registration!",
-        alertIcon: 'success',
-        ShowConfirmButton:false,
-        timer: 1500,
-        ruta:'signinC'
-    })
     console.log(newUser);
 }   
 
@@ -40,8 +23,3 @@ exports.Signin = passport.authenticate('local-signin',
     failureRedirect: '/signin',
 });
 
-exports.SigninC =passport.authenticate('local-signin',
-{
-    successRedirect:  '/indexC',
-    failureRedirect: '/signinC',
-});

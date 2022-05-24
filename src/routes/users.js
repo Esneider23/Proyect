@@ -4,7 +4,11 @@ const controller = require('../controllers/controllers');
 const {isAuthenticated} = require('../helpers/auth')
 
 router.get('/signin', (req,res)=>{
-    res.render('signin')
+    res.render('signin');
+})
+
+router.get('/signup', isAuthenticated, (req,res)=>{
+    res.render('signup');
 })
 
 

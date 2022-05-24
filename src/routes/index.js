@@ -15,9 +15,6 @@ router.get('/index', isAuthenticated, (req,res)=>{
     res.render('index');
 }) 
 
-router.get('/indexC', isAuthenticated, (req,res)=>{ 
-    res.render('indexC');
-}) 
 
 router.get('/Usuarios', isAuthenticated, (req,res)=>{ 
     res.render('Usuarios');
