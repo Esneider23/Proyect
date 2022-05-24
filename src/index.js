@@ -4,6 +4,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
+const config = require('./config.js');
 
 //Initialiazaions
 const app = express();
@@ -11,7 +12,7 @@ require('./database');
 require('./config/passport');
 
 //Setings
-app.set('port', process.env.port || 4200)
+app.set('port', config.port)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
 
@@ -44,5 +45,5 @@ app.use('/resources', express.static(__dirname + '/public'));
 
 //Server is listenning
 app.listen(app.get('port'), () =>{
-    console.log(`Server on port ${app.get('port')}`)
+    console.log(`Server on http://localhost:${app.get('port')}`)
 })
