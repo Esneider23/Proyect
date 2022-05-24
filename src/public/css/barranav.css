@@ -2,12 +2,11 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Quicksand", sans-serif;
-    background: gray;
 }
 nav  {
     background-color: rgba(0,74,173,255);
-    height: 63px;
-    line-height: 60px;
+    height: 62px;
+    line-height: 62px;
 }
 
 #nav-container {
@@ -37,8 +36,6 @@ nav  {
 }
 
 #actual-page {
-    border-bottom: 3px solid white;
-    height: 53px;
-    width: 70px;
-    float: left;
+    padding: 0 0 17px 0;
+    border-bottom: 3px solid #ffffff;
 }

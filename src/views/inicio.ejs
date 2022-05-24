@@ -20,34 +20,110 @@
       </a>
 
       <div class="nav-right">
-        <div id="actual-page">
-          <a class="nav-botton" href="/">
+        <a class="nav-botton" href="/">
+          <span id="actual-page">
             Inicio
-          </a>
-        </div>
+          </span>
+        </a>
         <a class="nav-botton" href="/rutas">
           Rutas
         </a>
         <a class="nav-botton" href="/signin">
-          Colaboradores
-        </a>
-        <a class="nav-botton" href="/signupCl">
-          Registrarse
+          Log In
         </a>
       </div>
     </div>
   </nav>
-  
+
   <div class="carousel">
-    <div class="carousel__item" id="carousel_1"><h2 class="title_carousel">Los Mejores viajes</h2></div>
-    <div class="carousel__item" id="carousel_2"><h2 class="title_carousel">Cartagena</h2></div>
-    <div class="carousel__item" id="carousel_3"><h2 class="title_carousel">Medellin</h2></div>
+    <div class="carousel__item" id="carousel_1">
+      <h2 class="title_carousel">Los Mejores viajes</h2>
+    </div>
+    <div class="carousel__item" id="carousel_2">
+      <h2 class="title_carousel">Cartagena</h2>
+    </div>
+    <div class="carousel__item" id="carousel_3">
+      <h2 class="title_carousel">Medellin</h2>
+    </div>
   </div>
   <script src="resources/css/inicio.js"></script>
-  
+
+  <div id="container-offer">
+    <h3 id="title_offers">¡OFERTAS ESPECIALES!</h3>
+    <div id="div_provicional">
+      <a href="/">
+        <div class="offer">
+          <img class="img_offer" src="resources/img/medellin.png" alt="">
+          <p class="p-offer">100.000 COP</p>
+          <h4 class="subtitle_offer">Medellin</h4>
+        </div>
+      </a>
+      <a href="/">
+        <div class="offer">
+          <img class="img_offer" src="resources/img/cartagena.png" alt="">
+          <p class="p-offer">100.000 COP</p>
+          <h4 class="subtitle_offer">Cartagena</h4>
+        </div>
+      </a>
+      <a href="/">
+        <div class="offer">
+          <img class="img_offer" src="resources/img/cali.jpg" alt="">
+          <p class="p-offer">100.000 COP</p>
+          <h4 class="subtitle_offer">Calí</h4>
+        </div>
+      </a>
+      <a href="/">
+        <div class="offer">
+          <img class="img_offer" src="resources/img/barranquilla.jpg" alt="">
+          <p class="p-offer">100.000 COP</p>
+          <h4 class="subtitle_offer">Barranquilla</h4>
+        </div>
+      </a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
 
 
+  <div id="container">
+    <div>
+      <div class="form-inicio">
+        <form action="">
+          <select name="origen">
+            <option value="">Origen</option>
+            <option value="">Medellin</option>
+            <option value="">Cartagena</option>
+            <option value="">Cali</option>
+            <option value="">Barranquilla</option>
+          </select>
+          <br>
+          <select name="destino">
+            <option value="">Destino</option>
+            <option value="">Medellin</option>
+            <option value="">Cartagena</option>
+            <option value="">Cali</option>
+            <option value="">Barranquilla</option>
+          </select> <br>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
 
+      <div class="text-inicio">
+        <h3 id="title-text-inicio">
+          ¡LOS MEJORES VIAJES AL MEJOR PRECIO!
+        </h3>
+        <P id="paragraph-text-inicio">
+          Enim amet consectetur quis ipsum nostrud labore velit consequat non ipsum adipisicing mollit. Ex enim commodo
+          deserunt exercitation nulla. Magna voluptate cillum ea irure reprehenderit occaecat velit cupidatat in sit
+          nisi
+          proident qui. Consequat id veniam ipsum nulla commodo nostrud irure laborum irure laboris aliquip amet ullamco
+          irure. Non quis sint est consequat consectetur occaecat qui ipsum veniam dolore quis deserunt. Aliquip laboris
+          culpa dolore elit ullamco sit pariatur. Nostrud fugiat amet veniam voluptate mollit pariatur voluptate dolore
+          occaecat sit.
+        </P>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
 
   <footer>
     <seccion id="seccion1">
@@ -59,7 +135,7 @@
         Vigilado Super intendencia de transporte y el gobierno ncional.
       </p>
       <ul id="ul-footer">
-        <li class="li-footer" ><a href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
+        <li class="li-footer"><a href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
             <img src="resources/img/facebook.png" alt="Logo de facebook" class="icon_social_media">
           </a>
         </li>
@@ -98,7 +174,7 @@
       <p>
         Colombia - Bogota.
         Cra.#78-34 San Fernando - 31 <br>
-      </p>  
+      </p>
       <p>
         Colombia - Cali. <br>
         Cra.#81-33 al frente de la casa <br>
@@ -108,11 +184,11 @@
     <seccion id="seccion4">
       <h3 class="footer_title"><b>Redes Sociales</b></h3>
       <p>Facebook: Buses SA <br>
-        Intagram: @Buses_SA <br>  
+        Intagram: @Buses_SA <br>
         twitter: @Buses_SA
       </p>
     </seccion>
-    <div class="clearfix"></div> 
+    <div class="clearfix"></div>
   </footer>
 </body>
 
