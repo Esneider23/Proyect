@@ -28,9 +28,7 @@ router.get('/logout', (req,res)=>
 
 
 router.post('/signin', controller.Signin);
-router.post('/signinC', controller.SigninC);
-/*router.post('/signupAd', controller.Signup);*/
-router.post('/signupCl', controller.Signup);
+router.post('/signup', controller.Signup);
 
 
 module.exports = router;

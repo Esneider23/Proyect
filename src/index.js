@@ -11,7 +11,7 @@ require('./database');
 require('./config/passport');
 
 //Setings
-app.set('port', process.env.port || 4000)
+app.set('port', process.env.port || 4200)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
 
