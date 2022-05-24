@@ -1,3 +1,188 @@
-#temporal {
-    height: 100vh;
+#cuerpo{
+    background: #d8d9d4;
+    padding: 0;
+    margin: 0;
+}
+
+#cuerpo-interno{
+    padding: auto;
+    margin: 20px;
+    min-height: 100%;
+    
+}
+
+#titulo1{
+    padding: auto;
+    color:#2c333a;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 4px solid #7b7c9b;
+}
+
+#destino1{
+    border: 20px;
+    border-radius: 13px;
+    background: white;
+    orientation: horizontal;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+#img1{
+    height: auto;
+    width: 100%;
+    list-style: none;
+}
+
+#saber{
+    font-size: 170%;
+}
+
+#contenido{
+    font-size: 100%;
+}
+
+button{
+    height: 40%;
+    width: 40%;
+    background-color: #b8ed36;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5%;
+    display: inline;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/*popup*/
+
+.overlay{
+    background: rgba(0, 0, 0,.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay.active{
+    visibility: visible;
+}
+
+.popup{
+    background: #f8f8f8;
+    box-shadow: 0px,0px,5px,0px rgba(0, 0, 0, 0.3);
+    border-radius: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20PX;
+    text-align: center;
+    width: 600px;
+
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup .btn-cerrar{
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+    opacity: 0;
+}
+
+.popup .btn-cerrar:hover{
+    color: black;
+}
+
+.popup h2{
+    font-size: 36px;
+    font-weight: 600px;
+    margin-bottom: 10px;
+    
+}
+
+.popup p{
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.popup img{
+    height: auto;
+    width: 400px;
+    
+}
+
+.popup .btn-submit{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    color: rgb(0, 0, 0, 0 );
+    background: #b8ed36;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s ease all;
+    opacity: 0;
+}
+
+.popup .btn-submit:hover{
+    background: #9dff00;
+}
+
+.popup.active {opacity: 1; transform: scale(1);}
+.popup.active h2{animation: entradaTitulo .8s ease .5s forwards;}
+.popup.active img{animation: entradaImagen .8s ease .7s forwards;}
+.popup.active p{animation: entradaParrafo .8s ease .9s forwards;}
+.popup.active .btn-submit{animation: entradaBotton .8s ease .11s forwards;}
+
+@keyframes entradaTitulo{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaImagen{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaParrafo{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaBotton{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
