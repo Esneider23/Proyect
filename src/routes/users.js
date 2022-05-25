@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Swal = require('sweetalert2')
 const controller = require('../controllers/controllers');
 const {isAuthenticated} = require('../helpers/auth')
 
@@ -15,7 +16,15 @@ router.get('/signup', isAuthenticated, (req,res)=>{
 router.get('/logout', (req,res)=>
 {
     req.logout();
-    res.redirect('/');
+    res.render('logout',{
+        alert:true,
+        alertTitle: "Exito",
+        alertMessage: "Usted a salido con exito",
+        alertIcon: 'success',
+        ShowConfirmButton:false,
+        timer: 1500,
+        ruta:''
+    })
 })
 
 
