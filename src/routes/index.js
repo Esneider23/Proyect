@@ -20,6 +20,10 @@ router.get('/Usuarios', isAuthenticated, (req,res)=>{
     res.render('Usuarios');
 }) 
 
+router.get('/Mas/Cartagena', (req, res)=>{
+    res.send('mundo');
+})
+
 router.get('/hola', isAuthenticated,(req,res)=>
 {
     res.send("Mundo");
