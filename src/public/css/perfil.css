@@ -1,0 +1,20 @@
+#container{
+    width:auto;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    /*overflow: hidden;
+    comenta o descomenta las propiedades overflow*/
+    overflow: visible;
+    margin:10px;
+    padding:10px;
+}
+
+#container2
+{
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+    position: relative;
+    padding: 10px;
+}

@@ -17,13 +17,17 @@ router.get('/index', isAuthenticated, async (req,res)=>{
 }) 
 
 
-router.get('/usuarios', isAuthenticated, (req,res)=>{ 
-    res.render('Usuarios');
-}) 
-
 router.get('/adminrutas', isAuthenticated, (req,res)=>{ 
     res.render('administrarRutas');
 }) 
+
+router.get('/perfil', isAuthenticated, (req,res)=>{ 
+    res.render('perfil', {user:req.user});
+}) 
+
+router.get('/usuarios', isAuthenticated,(req,res)=>{
+    res.render('usuarios');
+})
 
 router.get('/Cartagena', (req, res)=>{
     res.render('Cartagena');
