@@ -2,225 +2,275 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advance Travel</title>
-    <link rel="stylesheet" href="resources/css/barranav.css">
-    <link rel="stylesheet" href="resources/css/footer.css">
-    <link rel="stylesheet" href="resources/css/rutas.css">
-    <link rel="icon" href="resources/img/Logo3.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Travel</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="resources/css/barranav.css">
+  <link rel="stylesheet" href="resources/css/footer.css">
+  <link rel="stylesheet" href="resources/css/rutas.css">
+  <link rel="stylesheet" href="resources/css/popup.css">
+  <link rel="icon" href="resources/img/Logo3.png">
+  <enlace href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600| Open+Sans" rel="hoja de estilo">
 </head>
 
 <body>
-    <nav>
-      <div id="nav-container">
-        <a href="/">
-          <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="30" height="24">
-        </a>
-        <div class="nav-right">
-          <a class="nav-botton" href="/">
+
+  <nav>
+    <div id="nav-container">
+      <a href="/">
+        <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="30" height="24">
+      </a>
+
+      <div class="nav-right">
+        <a class="nav-botton" href="/">
             Inicio
-          </a>
-          <a class="nav-botton" href="/rutas">
-            <span id="actual-page">
-              Rutas
-            </span>
-          </a>
-          <a class="nav-botton" href="/signin">
-            Log In
-          </a>
-        </div>
+        </a>
+        <a class="nav-botton" href="/rutas">
+          <span id="actual-page">
+            Rutas
+          </span>
+        </a>
+        <a class="nav-botton" href="/signin">
+          Log In
+        </a>
       </div>
-    </nav>
-    <div id="cuerpo">
-      <div id="cuerpo-interno">
-        <div id="titulo1">
-          <h1>¡Nuestros destinos!</h1>
-        </div>
-        <br />
-        <fagmento>
-          <container>
-              <div id="destino1">
-                <table CELLPADDING=5 CELLSPACING=5>
-                  <center>
-                    <tr>
-                      <td WIDTH="22%">
-                        <img id="img1"
-                          src="https://www.elagoradiario.com/wp-content/uploads/2021/02/vista-Cartagena-de-Indias-Colombia-1140x600.jpg"
-                          alt="Cartagena de Indias">
-                      </td>
-                      <td id="contenido" WIDTH="40%" VALIGN=top>
-                        <h2 id="parrafo1"> Cartagena de Indias</h2>
-                        <p>Cartagena de Indias es uno de los destinos turísticos más importante de Colombia y de América Latina. 
-                          El hecho de ser declarada como Patrimonio de la Humanidad por la Unesco la fortaleció como una potencia 
-                          turística, con atractivos naturales, historia y estilos arquitectónicos y neoclásicos.
-                        </p>
-                      </td>
-                      <td ALIGN=center>
-                        <button class="abrir-popup" id="abrir-popup">
-                          <h2 id="saber">¡Saber mas!</h2>
-                        </button>
-                      </td>
-                    </tr>
-                  </center>
-                </table>
-              </div>
-              <br />
-            </container>
-    
-            <container>
-              <div id="destino1">
-                <table CELLPADDING=5 CELLSPACING=5>
-                  <center>
-                    <tr>
-                      <td WIDTH="22%">
-                        <img id="img1"
-                          src="https://www.semana.com/resizer/ZFSCePm535z9OiZLw8yoUfKEZj4=/1200x675/filters:format(jpg):quality(50)//cloudfront-us-east-1.images.arcpublishing.com/semana/SXKRYNHTJBDJFKVSQXEUSD7PNU.jpg"
-                          alt="Cali">
-                      </td>
-                      <td WIDTH="40%" VALIGN=top>
-                        <h2>Cali</h2>
-                        <p>
-                          Cali, esta ubicada en el departamento del Valle del Cauca, se hace uno de los destinos turisticos más importantes de Colombia que combina las realizaciones contemporáneas y los barrios tradicionales 
-                          donde aún se guardan iglesias, museos y teatros actualmente declarados monumentos nacionales. 
-                        </p>
-                      </td>
-                      <td ALIGN=center>
-                        <button class="btn-abrir-popup2" id="btn-abrir-popup2">
-                          <h2>¡Saber mas!</h2>
-                        </button>
-                      </td>
-                    </tr>
-                  </center>
-                </table>
-              </div>
-              <br />
-            </container>
-    
-            <container>
-              <div id="destino1">
-                <table CELLPADDING=5 CELLSPACING=5>
-                  <center>
-                    <tr>
-                      <td WIDTH="22%">
-                        <img id="img1"
-                          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a2/58/15/plaza-san-nicolas.jpg?w=700&h=-1&s=1"
-                          alt="Barranquilla">
-                      </td>
-                      <td WIDTH="40%" VALIGN=top>
-                        <h2>Barranquilla</h2>
-                        <p>Barranquilla, también conocida como la 'Arenosa' o 'Curramba la Bella', 
-                          es una de las principales ciudades de Colombia y un destino turístico de referencia para locales y extranjeros. 
-                          Esta ciudad, donde el río Magdalena termina su largo recorrido, es cuna de grandes músicos, literatos y pintores.</p>
-                      </td>
-                      <td ALIGN=center>
-                        <button class="btn-abrir-popup4" id="btn-abrir-popup4">
-                          <h2>¡Saber mas!</h2>
-                        </button>
-                      </td>
-                    </tr>
-                  </center>
-                </table>
-              </div>
-              <br />
-            </container>
+    </div>
+  </nav>
 
+  <div id="cuerpo">
+    <div id="cuerpo-interno">
+      <div>
+        <h1 id="titulo1">¡Nuestros destinos!</h1>
+      </div>
+      <fagmento>
+        <container>
+          <div id="destino1">
+            <table CELLPADDING=5 CELLSPACING=5>
+              <center>
+                <tr>
+                  <td WIDTH="22%">
+                    <img id="img1"
+                      src="https://www.elagoradiario.com/wp-content/uploads/2021/02/vista-Cartagena-de-Indias-Colombia-1140x600.jpg"
+                      alt="Cartagena de Indias">
+                  </td>
+                  <td id="contenido" WIDTH="40%" VALIGN=top>
+                    <h2 id="parrafo1">Cartagena de Indias</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nihil et nulla quaerat velit exercitationem
+                      recusandae optio, placeat ab natus id a animi
+                      facilis reiciendis dolor distinctio quidem fugit
+                      autem tempore?</p>
+                  </td>
+                  <td ALIGN=center>
+                    <button class="abrir-popup" id="abrir-popup">
+                      <h2 id="saber">¡Saber mas!</h2>
+                    </button>
+                  </td>
+                </tr>
+              </center>
+            </table>
+          </div>
+          <br />
+        </container>
 
-            <container>
-              <div id="destino1">
-                <table CELLPADDING=5 CELLSPACING=5>
-                  <center>
-                    <tr>
-                      <td WIDTH="22%">
-                        <img id="img1"
-                          src="https://www.duna.cl/media/2021/07/Medellín-foto-ProColombia.jpg"
-                          alt="Medellin">
-                      </td>
-                      <td WIDTH="40%" VALIGN=top>
-                        <h2>Medellin</h2>
-                        <p>El clima de Medellín, su paisaje montañoso, sus espectaculares vistas panorámicas y sus espacios verdes convierten los recorridos por la ciudad en una experiencia que seduce. 
-                          Lugares como el Jardín Botánico, el parque de los Pies Descalzos, el parque Berrío y el parque Lleras son sitios que no puedes dejar de visitar.</p>
-                      </td>
-                      <td ALIGN=center>
-                        <button class="btn-abrir-popup4" id="btn-abrir-popup4">
-                          <h2>¡Saber mas!</h2>
-                        </button>
-                      </td>
-                    </tr>
-                  </center>
-                </table>
-              </div>
-              <br />
-            </container>
-        </fagmento>
-        </div>
+        <container>
+          <div id="destino1">
+            <table CELLPADDING=5 CELLSPACING=5>
+              <center>
+                <tr>
+                  <td WIDTH="22%">
+                    <img id="img1"
+                      src="https://www.semana.com/resizer/ZFSCePm535z9OiZLw8yoUfKEZj4=/1200x675/filters:format(jpg):quality(50)//cloudfront-us-east-1.images.arcpublishing.com/semana/SXKRYNHTJBDJFKVSQXEUSD7PNU.jpg"
+                      alt="Cali">
+                  </td>
+                  <td WIDTH="40%" VALIGN=top>
+                    <h2>Cali</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nihil et nulla quaerat velit exercitationem
+                      recusandae optio, placeat ab natus id a animi
+                      facilis reiciendis dolor distinctio quidem fugit
+                      autem tempore?</p>
+                  </td>
+                  <td ALIGN=center>
+                    <button class="abrir-popup2" id="abrir-popup2">
+                      <h2>¡Saber mas!</h2>
+                    </button>
+                  </td>
+                </tr>
+              </center>
+            </table>
+          </div>
+          <br />
+        </container>
 
-    <footer>
-      <seccion id="seccion1">
-        <img src="resources/img/Logo3.png" alt="Logo">
-        <p>
-          Buses S.A. Empresa de servico de transporte de buces desde hace muchos años.
+        <container>
+          <div id="destino1">
+            <table CELLPADDING=5 CELLSPACING=5>
+              <center>
+                <tr>
+                  <td WIDTH="22%">
+                    <img id="img1"
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bucaramanga_3_Sder_Col_enr_2022.jpg/1920px-Bucaramanga_3_Sder_Col_enr_2022.jpg"
+                      alt="Bucaramanga">
+                  </td>
+                  <td WIDTH="40%" VALIGN=top>
+                    <h2>Bucaramanga</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nihil et nulla quaerat velit exercitationem
+                      recusandae optio, placeat ab natus id a animi
+                      facilis reiciendis dolor distinctio quidem fugit
+                      autem tempore?</p>
+                  </td>
+                  <td ALIGN=center>
+                    <button class="abrir-popup3" id="abrir-popup3">
+                      <h2>¡Saber mas!</h2>
+                    </button>
+                  </td>
+                </tr>
+              </center>
+            </table>
+          </div>
+          <br />
+        </container>
+
+        <container>
+          <div id="destino1">
+            <table CELLPADDING=5 CELLSPACING=5>
+              <center>
+                <tr>
+                  <td WIDTH="22%">
+                    <img id="img1"
+                      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a2/58/15/plaza-san-nicolas.jpg?w=700&h=-1&s=1"
+                      alt="Barranquilla">
+                  </td>
+                  <td WIDTH="40%" VALIGN=top>
+                    <h2>Barranquilla</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nihil et nulla quaerat velit exercitationem
+                      recusandae optio, placeat ab natus id a animi
+                      facilis reiciendis dolor distinctio quidem fugit
+                      autem tempore?</p>
+                  </td>
+                  <td ALIGN=center>
+                    <button class="abrir-popup4" id="abrir-popup4">
+                      <h2>¡Saber mas!</h2>
+                    </button>
+                  </td>
+                </tr>
+              </center>
+            </table>
+          </div>
+          <br />
+        </container>
+
+        <container>
+          <div id="destino1">
+            <table CELLPADDING=5 CELLSPACING=5>
+              <center>
+                <tr>
+                  <td WIDTH="22%">
+                    <img id="img1" src="https://www.duna.cl/media/2021/07/Medell%C3%ADn-foto-ProColombia.jpg"
+                      alt="Medellin">
+                  </td>
+                  <td WIDTH="40%" VALIGN=top>
+                    <h2>Medellin</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                      elit. Nihil et nulla quaerat velit exercitationem
+                      recusandae optio, placeat ab natus id a animi
+                      facilis reiciendis dolor distinctio quidem fugit
+                      autem tempore?</p>
+                  </td>
+                  <td ALIGN=center>
+                    <button class="abrir-popup5" id="abrir-popup5">
+                      <h2>¡Saber mas!</h2>
+                    </button>
+                  </td>
+                </tr>
+              </center>
+            </table>
+          </div>
+          <br />
+        </container>
+      </fagmento>
+    </div>
+  </div>
+
+  <footer>
+    <seccion id="seccion1">
+      <img src="resources/img/Logo3.png" alt="Logo">
+      <p>
+        Buses S.A. Empresa de servico de transporte de buces desde hace muchos años.
+      </p>
+      <p>
+        Vigilado Super intendencia de transporte y el gobierno ncional.
+      </p>
+      <ul id="ul-footer">
+        <li class="li-footer"><a href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
+            <img src="resources/img/facebook.png" alt="Logo de facebook" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="https://www.instagram.com/advancestravel/">
+            <img src="resources/img/instagram.png" alt="Logo de Instagram" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="https://twitter.com/ESNEIDERGUZMA11">
+            <img src="resources/img/twitter.png" alt="Logo de twitter" class="icon_social_media">
+          </a>
+        </li>
+      </ul>
+    </seccion>
+    <seccion id="seccion2">
+      <h3 class="footer_title"><b>Contacto</b></h3>
+      <p>Atencion al cliente: <br>
+        655332773 <br>
+        3008666628 - 3118948832 <br>
+        atencionbuses@buses.com <br>
+      </p>
+      <p>
+        Contacto negocios: <br>
+        848999390 <br>
+        311777788 - 317784888888 <br>
+        negociosbusesas@buses.com
+      </p>
+    </seccion>
+    <seccion id="seccion3">
+      <h3 class="footer_title"><b>Donde estamos</b></h3>
+      <p>Colombia - Cartagena. <br>
+        Transersal 99 - Avenida Sherman <br>
+        Wallaby 72 <br>
+      </p>
+      <p>
+        Colombia - Bogota.
+        Cra.#78-34 San Fernando - 31 <br>
+      </p>
+      <p>
+        Colombia - Cali. <br>
+        Cra.#81-33 al frente de la casa <br>
+        de carlos.
+      </p>
+    </seccion>
+    <seccion id="seccion4">
+      <h3 class="footer_title"><b>Redes Sociales</b></h3>
+      <p>Facebook: Buses SA <br>
+        Intagram: @Buses_SA <br>
+        twitter: @Buses_SA
+      </p>
+    </seccion>
+    <div class="clearfix"></div>
+    <center>
+      <div id="ultimo">
+        <p id="pe">
+          Buses 2022
+          <img id="certificado" src="resources/img/certificacion.png" alt="cerfificasion">
         </p>
-        <p>
-          Vigilado Super intendencia de transporte y el gobierno ncional.
-        </p>
-        <ul id="ul-footer">
-          <li class="li-footer"><a href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
-              <img src="resources/img/facebook.png" alt="Logo de facebook" class="icon_social_media">
-            </a>
-          </li>
-          <li class="li-footer">
-            <a href="https://www.instagram.com/advancestravel/">
-              <img src="resources/img/instagram.png" alt="Logo de Instagram" class="icon_social_media">
-            </a>
-          </li>
-          <li class="li-footer">
-            <a href="https://twitter.com/ESNEIDERGUZMA11">
-              <img src="resources/img/twitter.png" alt="Logo de twitter" class="icon_social_media">
-            </a>
-          </li>
-        </ul>
-      </seccion>
-      <seccion id="seccion2">
-        <h3 class="footer_title"><b>Contacto</b></h3>
-        <p>Atencion al cliente: <br>
-          655332773 <br>
-          3008666628 - 3118948832 <br>
-          atencionbuses@buses.com <br>
-        </p>
-        <p>
-          Contacto negocios: <br>
-          848999390 <br>
-          311777788 - 317784888888 <br>
-          negociosbusesas@buses.com
-        </p>
-      </seccion>
-      <seccion id="seccion3">
-        <h3 class="footer_title"><b>Donde estamos</b></h3>
-        <p>Colombia - Cartagena. <br>
-          Transersal 99 - Avenida Sherman <br>
-          Wallaby 72 <br>
-        </p>
-        <p>
-          Colombia - Bogota.
-          Cra.#78-34 San Fernando - 31 <br>
-        </p>
-        <p>
-          Colombia - Cali. <br>
-          Cra.#81-33 al frente de la casa <br>
-          de carlos.
-        </p>
-      </seccion>
-      <seccion id="seccion4">
-        <h3 class="footer_title"><b>Redes Sociales</b></h3>
-        <p>Facebook: Buses SA <br>
-          Intagram: @Buses_SA <br>
-          twitter: @Buses_SA
-        </p>
-      </seccion>
-      <div class="clearfix"></div>
-    </footer>
+      </div>
+    </center>
+  </footer>
+  <script src="views/popup.js"></script>
 </body>
 
 </html>

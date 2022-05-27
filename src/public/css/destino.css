@@ -8,6 +8,10 @@
     margin: 0 20px 0 20px;
 }
 
+#pe{
+    margin: 0;
+}
+
 #titulo1{
     color:#2c333a;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,42 +19,28 @@
     margin-top: 0;
 }
 
-#pe{
-    margin: 0;
-}
-
-#destino1{
-    border: 20px;
-    border-radius: 13px;
-    background: white;
-    orientation: horizontal;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-
-#img1{
-    height: auto;
-    width: 100%;
-    list-style: none;
-}
-
-#saber{
+#titulo3{
     font-size: 170%;
 }
 
-#contenido{
-    font-size: 100%;
+#destino2{
+    border: 20px;
+    border-radius: 13px;
+    background: white;
+    orientation: vertical;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 button{
-    height: 40%;
-    width: 40%;
+    height: 70%;
+    width: 70%;
     background-color: #b8ed36;
     color: rgb(0, 0, 0);
     border: none;
-    border-radius: 5%;
+    border-radius: 13px;
     display: inline;
     text-align: center;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
 }

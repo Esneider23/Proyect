@@ -25,6 +25,10 @@ router.get('/perfil', isAuthenticated, (req,res)=>{
     res.render('perfil', {user:req.user});
 }) 
 
+router.get('/actualizar', isAuthenticated, (req,res)=>{
+    res.render('actualizarp', {user:req.user});
+})
+
 router.get('/usuarios', isAuthenticated,(req,res)=>{
     res.render('usuarios');
 })
@@ -33,5 +37,12 @@ router.get('/Cartagena', (req, res)=>{
     res.render('Cartagena');
 })
 
+router.get('/destino',(req,res)=>{
+    res.render('destino');
+})
+
+router.get('/compra',(req,res)=>{
+    res.render('compra');
+})
 
 module.exports = router;

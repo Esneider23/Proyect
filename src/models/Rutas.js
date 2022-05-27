@@ -6,7 +6,8 @@ const RutasSchema = new Schema({
     origen: {type: String, require: true},
     destino: {type: String, require:true},
     fecha_salida: {type: Date, require: true, default: Date.now()},
-    fecha_llegada: {type: Date, default: moment().add(5,'hours').unix()}
+    fecha_llegada: {type: Date, default: moment().add(5,'hours').unix()},
+    precio: {tipe: int, required: true}
 });
 
 

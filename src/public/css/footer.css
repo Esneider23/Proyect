@@ -66,3 +66,11 @@ footer {
     border-bottom: 3px solid #ffffff;
 }
 
+#certificado{
+    height: 15px;
+    width: auto;
+}
+
+#pe{
+    margin: 0;
+}
