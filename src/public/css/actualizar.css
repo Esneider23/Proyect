@@ -1,29 +1,83 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400);
-form{
-  padding: 60px;
-  max-width: 400px;
+
+
+
+#cuerpoo {
   background-color: #E7E7E7;
-  margin: 0 auto;
+  border-radius: 13px;
+  margin: 20px;
+  border: 0;
 }
 
-form input, form textarea{
+form input,form textarea {
   margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
   width: 100%;
   padding: 10px;
-  box-sizing: border-box; 
-  border: none; 
-  color: #525c66; 
+  box-sizing: border-box;
+  border: none;
+  color: #525c66;
   font-size: 1em;
-  resize: none; 
+  resize: none;
 }
 
 form button {
-	display: block;
-	background-color: #0095eb;
-	padding: 10px 45px 10px 45px;
-	border: 0;
-	font-size: 1em; 
-	color: 	white;
+  display: block;
+  background-color: #0095eb;
+  padding: 10px 45px 10px 45px;
+  border: 0;
+  font-size: 1em;
+  color: white;
   font-family: "Roboto", sans-serif;
+}
+
+#caja {
+  border-radius: 20px;
+}
+
+#name,#email,#pass {
+  border-radius: 10px;
+}
+
+#pass,#email,#name {
+  width: 100%;
+  height: 35px;
+  border: 0;
+
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  color: #525c66;
+  font-size: 1em;
+  resize: none;
+}
+
+#Cancel {
+  margin: 10px;
+  background-color: #d14242;
+  height: 100%;
+  width: 80%;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+}
+
+#Update {
+  margin: 10px;
+  background-color: #20c726;
+  height: 100%;
+  width: 80%;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
