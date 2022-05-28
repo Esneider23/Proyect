@@ -1,7 +1,8 @@
 const express=require('express');
 const router = express.Router();
-const Swal = require('sweetalert2');
-const {isAuthenticated} = require('../helpers/auth')
+const controller = require('../controllers/controllers');
+const {isAuthenticated} = require('../helpers/auth');
+const User = require('../models/User');
 
 router.get('/',(req,res)=>{
     res.render('inicio')
@@ -25,12 +26,17 @@ router.get('/perfil', isAuthenticated, (req,res)=>{
     res.render('perfil', {user:req.user});
 }) 
 
-router.get('/actualizar', isAuthenticated, (req,res)=>{
-    res.render('actualizarp', {user:req.user});
+router.get('/actualizar_:id', isAuthenticated, async(req,res)=>{
+    const user = await User.findById(req.params.id);
+    console.log(user);
+    res.render('actualizarp', {user});
 })
 
-router.get('/usuarios', isAuthenticated,(req,res)=>{
-    res.render('usuarios');
+router.get('/usuarios', isAuthenticated, async (req,res)=>{
+    const users = await User.find({user: req.user})
+    .sort({date: "desc"})
+    .lean();
+    res.render('usuarios', {users});
 })
 
 router.get('/Cartagena', (req, res)=>{
@@ -45,4 +51,6 @@ router.get('/compra',(req,res)=>{
     res.render('compra');
 })
 
+
+router.post('/update_:id', controller.update);
 module.exports = router;

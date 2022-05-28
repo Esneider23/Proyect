@@ -60,10 +60,11 @@
     </div>
 
     <main>
-        <form action="/update" method="post">
+        <form action="/update_<%=user.id%>" method="post">
         <h1 style="text-align: center;">Actualizar Usuario</h1>
             </br>
         <CENTER> 
+            <input type="hidden" id="id" name="id" value="<%=user._id%>">
                 <table id="cuerpoo" CELLPADDING=15 CELLSPACING=15 WIDTH="50%">
                     <tr>
                         <td>
@@ -78,8 +79,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" id="name" name="user" placeholder="<%=user.name%>"
-                                                required>
+                                            <input type="text" id="user" name="user">
                                         </td>
                                     </tr>
                                 </table>
@@ -92,8 +92,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="email" id="email" name="email" placeholder="<%=user.email%>"
-                                                required>
+                                            <input type="email" id="email" name="email">
                                         </td>
                                     </tr>
                                 </table>
@@ -106,8 +105,7 @@
                                     </tr>
                                     <tr>
                                         <td WIDTH="40%">
-                                            <input type="password" id="pass" name="pass" placeholder="<%=user.pass%>"
-                                                required>
+                                          <input type="password" id="pass" name="password" >
                                         </td>
                                     </tr>
                                 </table>

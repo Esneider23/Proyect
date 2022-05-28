@@ -23,3 +23,14 @@ exports.Signin = passport.authenticate('local-signin', {
 });
 
 
+exports.update = async (req,res) =>
+{
+    const id = req.body.id;
+    const name = req.body.user;
+    const email = req.body.email;
+    const password = req.body.password;
+    const pass = req.body.password;
+    await User.findByIdAndUpdate(id, {name,email,password,pass});
+    res.redirect('/perfil')
+}
+
