@@ -8,6 +8,8 @@ const RutasSchema = new Schema({
     destino: {type: String, require:true},
     fecha_salida: {type: Date, require: true},
     fecha_llegada: {type: Date, required:true},
+    salida: {type: Date, required: true},
+    llegada: {type: Date, required:true},
     precio: {type: Number, required: true},
     cupos: {type: Number, required: true}
 });

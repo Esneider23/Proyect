@@ -64,7 +64,7 @@ router.get('/actualizarA_:id', isAuthenticated, async (req,res)=>
 
 router.get('/Crear_rutas', isAuthenticated, async (req, res)=>
 {
-    res.send("Hola");
+    res.render('registrar_rutas');
 })
 
 router.post('/update_:id', controller.update);
