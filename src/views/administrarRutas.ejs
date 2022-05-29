@@ -7,6 +7,7 @@
     <title>Advance Travel</title>
     <link rel="icon" href="resources/img/Logo3.png">
     <link rel="stylesheet" href="resources/css/estilos.css">
+    <link rel="stylesheet" href="resources/css/tabla.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
@@ -34,8 +35,8 @@
             
             <a href="/adminrutas" class="selected">
                 <div class="option">
-                    <i class="fa-solid fa-bus" title="Administrar rutas"></i>
-                    <h4>Administrar rutas</h4>
+                   <i class="fa-solid fa-calendar-days"></i>
+                    <h4>Administrar horarios</h4>
                 </div>
             </a>
 
@@ -58,13 +59,47 @@
                     <h4>Cerrar sesion</h4>
                 </div>
             </a>
-
         </div>
-
     </div>
 
     <main>
-        <h1>mundo</h1>
+        <div align="right">
+            <br>
+            <a href="/Crear_rutas">
+                <div class="option">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <h4>Crear rutas o horarios</h4>
+                </div>
+            </a>
+        </div>
+    
+        <table summary="Rutas y horarios resgistrados">
+            <caption>Rutas y horarios resgistrados</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <% rutas.forEach((rutas)=>{%>   
+                    <tr>
+                        <td><%= rutas._id%></td>
+                        <td><%= rutas.name%></td>
+                        <td><%= rutas.email%></td>
+                        <td><%= rutas.rol%></td>
+                        <td>
+                            
+                        </td>  
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+    
     </main>
 
     <script src="resources/css/script.js"></script>

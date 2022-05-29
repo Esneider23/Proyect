@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require('../controllers/controllers');
 const {isAuthenticated} = require('../helpers/auth');
 const User = require('../models/User');
+const Ruta = require('../models/Rutas.js');
 
 router.get('/',(req,res)=>{
     res.render('inicio')
@@ -18,8 +19,11 @@ router.get('/index', isAuthenticated, async (req,res)=>{
 }) 
 
 
-router.get('/adminrutas', isAuthenticated, (req,res)=>{ 
-    res.render('administrarRutas');
+router.get('/adminrutas', isAuthenticated, async (req,res)=>{
+    const rutas = await Ruta.find({ruta: req.ruta})
+    .sort({date: "desc"})
+    .lean();
+    res.render('administrarRutas', {rutas});
 }) 
 
 router.get('/perfil', isAuthenticated, (req,res)=>{ 
@@ -51,11 +55,16 @@ router.get('/compra',(req,res)=>{
     res.render('compra');
 })
 
-router.get('/actualizarA_:id', async (req,res)=>
+router.get('/actualizarA_:id', isAuthenticated, async (req,res)=>
 {
     const user = await User.findById(req.params.id);
     console.log(user);   
     res.render('actualizarA', {user});
+})
+
+router.get('/Crear_rutas', isAuthenticated, async (req, res)=>
+{
+    res.send("Hola");
 })
 
 router.post('/update_:id', controller.update);
