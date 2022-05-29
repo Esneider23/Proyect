@@ -2,4 +2,104 @@ body {
     background: linear-gradient(to bottom, #000428, #004683);
     animation: background-color 20s;
     min-height: 87vh;
+    align-items: center;
+    justify-content: center;
 }
+
+.card
+{
+    width: 70%;
+    padding: 30px 90px 90px 90px;
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    position: relative;
+}
+
+.card h2 {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.card .row {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid: auto / auto auto;
+    grid-template-columns: repeat(auto-fit,minmax(40%, 1fr));
+    grid-gap: 30px;
+}
+
+.card .row .col {
+    position: relative;
+    width: 100%;
+    margin: 30px 20px 40px 0;
+    transition: 0.5s;
+}
+  
+.card .row .form-group {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #ffffff;
+}
+
+.card .row .form-group input, 
+.card .row .form-group textarea {
+  position: absolute;
+  width: 90%;
+  height: 110%;
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+.card .row .form-group label {
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 0 0 30px;
+    display: block;
+    pointer-events: none;
+}
+
+.row .col:nth-child(6) {
+    margin-top: 64px;
+}
+
+.card .row .form-group input:focus,
+.card .row .form-group textarea:focus {
+  border: 5px solid #ffffff;
+  transition: all 0.5s;
+}
+
+select{ 
+    font-size: 25px;
+    margin: 0 0 0 0px;
+    width: 90%;
+    height: 110%;
+    color: #ffffff;
+    text-shadow:0 1px 0 rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    background-color: transparent;
+    padding: 0px 0 0px 10px;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+select option
+{
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: black;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+
