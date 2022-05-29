@@ -7,6 +7,8 @@
     <title>Advance Travel</title>
     <link rel="icon" href="resources/img/Logo3.png">
     <link rel="stylesheet" href="resources/css/estilos.css">
+    <link rel="stylesheet" href="resources/css/tabla.css">
+
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
@@ -63,9 +65,44 @@
         </div>
 
     </div>
-
     <main>
+        <a href="/signup">
+            <div style="position: 45px 89px;">
+                <i class="fa-solid fa-user-plus" style="background-image: white; ""></i>
+                <h4>Agregar usuario</h4>
+            </div>
+        </a>
         
+        
+        <table summary="Tabla de usuarios">
+            <caption>Usuarios registrados</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <% users.forEach((users)=>{%>   
+                    <tr>
+                        <td><%= users._id%></td>
+                        <td><%= users.name%></td>
+                        <td><%= users.email%></td>
+                        <td><%= users.rol%></td>
+                        <td>
+                            <a href="/actualizarA_<%=users._id%>" class="btn btn-outline-info">Editar</a>
+                            <form action="/delete_<%=users._id%>" method="post">
+                                <button>Eliminar</button>
+                            </form>
+                        </td>  
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
     </main>
 
     <script src="resources/css/script.js"></script>

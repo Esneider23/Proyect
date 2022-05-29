@@ -51,6 +51,14 @@ router.get('/compra',(req,res)=>{
     res.render('compra');
 })
 
+router.get('/actualizarA_:id', async (req,res)=>
+{
+    const user = await User.findById(req.params.id);
+    console.log(user);   
+    res.render('actualizarA', {user});
+})
 
 router.post('/update_:id', controller.update);
+router.post('/delete_:id', controller.delete);
+
 module.exports = router;

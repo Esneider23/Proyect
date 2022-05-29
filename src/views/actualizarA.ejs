@@ -43,7 +43,7 @@
                     <h4>Usuarios</h4>
                 </div>
             </a>
-            <a href="/perfil">
+            <a href="/perfil" class="selected">
                 <div class="option">
                     <i class="fa-solid fa-user" title="Perfil"></i>
                     <h4>Perfil</h4>
@@ -60,10 +60,11 @@
     </div>
 
     <main>
-        <form action="/signup" method="post">
-        <h1 style="text-align: center;">Crear Usuario</h1>
+        <form action="/update_<%=user.id%>" method="post">
+        <h1 style="text-align: center;">Actualizar Usuario</h1>
             </br>
         <CENTER> 
+            <input type="hidden" id="id" name="id" value="<%=user._id%>">
                 <table id="cuerpoo" CELLPADDING=15 CELLSPACING=15 WIDTH="50%">
                     <tr>
                         <td>
@@ -78,7 +79,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" id="user" name="user" required>
+                                            <input type="text" id="user" name="user" value="<%=user.name%>" readonly>
                                         </td>
                                     </tr>
                                 </table>
@@ -91,7 +92,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="email" id="email" name="email" required>
+                                            <input type="email" id="email" name="email" value="<%=user.email%>" readonly>
                                         </td>
                                     </tr>
                                 </table>
@@ -104,7 +105,7 @@
                                     </tr>
                                     <tr>
                                         <td WIDTH="40%">
-                                          <input type="password" id="pass" name="password" required>
+                                          <input type="password" id="pass" name="password" value="<%=user.password%>" readonly>
                                         </td>
                                     </tr>
                                 </table>
@@ -118,15 +119,16 @@
                                     </tr>
                                     <tr>
                                         <td WIDTH="40%">
-                                            <select id="rol" name="typ" required>
-                                                <option>Seleccione rol</option>
-                                                <option>Administrador</option>
-                                                <option>Cliente</option>
-                                                <option>Vendedor</option>
+                                            <select id="rol" name="typ" >
+                                                <option selected="true" disabled="disable">Seleccione rol</option>
+                                                <option value="Administrador">Administrador</option>
+                                                <option value="Cliente">Cliente</option>
+                                                <option value="Vendedor">Vendedor</option>
                                             </select>
                                         </td>
                                     </tr>
                                 </table>
+                                
                                 <center>
                                     <table WIDTH="75%">
                                         <tr>
@@ -134,13 +136,13 @@
                                             <td>
                                                 <center>
                                                     <button id="Update">
-                                                        <h2>Registrar</h2>
+                                                        <h2>Update</h2>
                                                     </button>
                                                 </center>
                                             </td>
                                             <td>
                                                 <center>
-                                                    <a href="/usuarios">
+                                                    <a href="/perfil">
                                                     <button id="Cancel" >
                                                         <h2>Cancel</h2>
                                                     </button>
@@ -155,12 +157,11 @@
                             </br>
                         </td>
                     </tr>
-                </table> 
+                </table>     
         </CENTER>
         </form>
     </main>
     <script src="resources/css/script.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

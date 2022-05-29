@@ -35,11 +35,11 @@ form button {
   border-radius: 20px;
 }
 
-#name,#email,#pass {
-  border-radius: 10px;
+#user,#email,#pass {
+  border-radius: 12px;
 }
 
-#pass,#email,#name {
+#pass,#email,#user {
   width: 100%;
   height: 35px;
   border: 0;
@@ -54,6 +54,22 @@ form button {
   resize: none;
 }
 
+#rol
+{
+  width: 100%;
+  height: 40px;
+  border: 0;
+
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  color: #525c66;
+  font-size: 1em;
+  resize: none;
+  border-radius: 12px;
+}
 #Cancel {
   margin: 10px;
   background-color: #d14242;
