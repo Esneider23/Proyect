@@ -69,5 +69,7 @@ router.get('/Crear_rutas', isAuthenticated, async (req, res)=>
 
 router.post('/update_:id', controller.update);
 router.post('/delete_:id', controller.delete);
+router.post('/CreateRuta', controller.Createrute);
+router.post('/delteruta_:id',controller.delteruta);
 
 module.exports = router;

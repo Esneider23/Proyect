@@ -48,7 +48,7 @@ body {
 .card .row .form-group input, 
 .card .row .form-group textarea {
   position: absolute;
-  width: 90%;
+  width: auto;
   height: 110%;
   background: transparent;
   outline: none;
@@ -102,4 +102,7 @@ select option
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
-
+#crear
+{
+    
+}

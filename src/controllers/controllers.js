@@ -1,5 +1,7 @@
 const User = require('../models/User');
 const passport = require('passport');
+const Rutas = require('../models/Rutas');
+const moment = require('moment');
 
 exports.Signup = async (req, res)=>{
    const name = req.body.user;
@@ -17,6 +19,21 @@ exports.Signup = async (req, res)=>{
     console.log(newUser);
     res.redirect('/usuarios')
 }   
+
+exports.Createrute = async (req, res)=>
+{
+    const nombre = req.body.nombre;
+    const origen = req.body.origen;
+    const destino = req.body.destino;
+    const fecha_salida = req.body.fecha_salida;
+    const fecha_llegada = req.body.fecha_llegada;
+    const precio = req.body.precio;
+    const cupos = req.body.cupos;
+    const newRuta = new Rutas({nombre,origen,destino,fecha_salida,fecha_llegada,precio,cupos});
+    await newRuta.save();
+    res.redirect('/adminrutas');
+
+}
 
 exports.Signin = passport.authenticate('local-signin', {
     successRedirect: '/index',
@@ -39,4 +56,10 @@ exports.delete = async(req,res)=>
 {
     await User.findByIdAndDelete(req.params.id);
     res.redirect('/usuarios');
+}
+
+exports.delteruta = async(req,res)=>
+{
+    await Rutas.findByIdAndDelete(req.params.id);
+    res.redirect('/adminrutas')
 }

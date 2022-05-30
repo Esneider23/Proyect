@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="resources/css/registrar_r.css">
     
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
 </head>
 <body id="body">
     <header>
@@ -65,94 +66,99 @@
     </div>
 
     <main>
-        <div class="card">
-            <h1 style="color: white;">Rutas y horarios</h1>
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" id="showId" readonly>
+            <form action="/CreateRuta" method="post">
+                <div class="card">
+                    <h1 style="color: white;">Rutas y horarios</h1>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" id="showId" name="nombre" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Origen</label>
+                                <select name="origen" id="origen" onchange="cambioOpciones();" >
+                                    <option value="Cartagena">Cartagena</option>
+                                    <option value="Cali">Cali</option>
+                                    <option value="Barranquilla">Barranquilla</option>
+                                    <option value="Bucaramanga">Bucaramanga</option>
+                                    <option value="Medellin">Medellin</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="col">
-                    <div class="form-group">
-                        <label>Origen</label>
-                        <select name="origen" id="origen" onchange="cambioOpciones();">
-                            <option value="Cartagen">Cartagena</option>
-                            <option value="Cali">Cali</option>
-                            <option value="Barranquilla">Barranquilla</option>
-                            <option value="Bucaramanga">Bucaramanga</option>
-                            <option value="Medellin">Medellin</option>
-                        </select>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Destino</label>
+                                <select name="destino" id="destino" onchange="cambioOpciones();" >
+                                    <option value="Cartagena">Cartagena</option>
+                                    <option value="Cali">Cali</option>
+                                    <option value="Barranquilla">Barranquilla</option>
+                                    <option value="Bucaramanga">Bucaramanga</option>
+                                    <option value="Medellin">Medellin</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                            <label>Fecha de salida</label>
+                            <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_salida" name="fecha_salida" >
+                        </div>
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                            <label>Fecha de llegada</label>
+                            <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_llegada" name="fecha_llegada">
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col">
+                            <div class="form-group">
+                                <label> Precio</label>
+                                <input type="number" min="0" id="precio" name="precio" style="width: auto;" >
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <label> Cupos</label>
+                                <input type="number" min="0" id="cupos" name="cupos" style="height: 110%; width:42%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <center>
+                        <div class="row">
+                            <div class="col">
+                                <button id="crear">
+                                    <h2>Crear</h2>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <a href="/adminrutas">
+                                    <button id="crear">
+                                        <h2>Cancelar</h2>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </center>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label>Destino</label>
-                        <select name="destino" id="destino" onchange="cambioOpciones();">
-                            <option value="Cartagena">Cartagena</option>
-                            <option value="Cali">Cali</option>
-                            <option value="Barranquilla">Barranquilla</option>
-                            <option value="Bucaramanga">Bucaramanga</option>
-                            <option value="Medellin">Medellin</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="form-group">
-                       <label>Fecha de salida</label>
-                       <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_salida" name="fecha_salida">
-                   </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                       <label>Fecha de llegada</label>
-                       <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_llegada" name="fecha_llegada">
-                   </div>
-                </div>
-
-                <div class="col">
-                    <div class="form-group">
-                        <label> Hora de salida</label>
-                        <input type="time" id="salida" name="salida">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label> Hora de llegada</label>
-                        <input type="time" id="llegada" name="llegada">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label> Precio</label>
-                        <input type="number" min="0" id="precio" name="precio">
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label> Cupos</label>
-                        <input type="number" min="0" id="cupos" name="cupos" style="height: 110%; width:42%;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+        </form>
+    </main>
 
     <script src="resources/css/script.js"></script>
 
@@ -170,6 +176,11 @@
             document.getElementById('showId').value = ori.value + ' - ' + des.value;
         }
 
+        function fecha(e)
+        {
+            var fecha = moment(e.value);
+            console.log(fecha.format("DD/MM/YYYY"));
+        }
     </script>
 </body>
 </html>

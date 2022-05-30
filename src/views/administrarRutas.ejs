@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="resources/css/estilos.css">
     <link rel="stylesheet" href="resources/css/tabla.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+
 </head>
 <body id="body">
     <header>
@@ -74,7 +76,8 @@
                 </div>
             </a>
         </div>
-    
+
+
         <table summary="Rutas y horarios resgistrados">
             <caption>Rutas y horarios resgistrados</caption>
             <thead>
@@ -93,7 +96,18 @@
             <tbody>
                 <% rutas.forEach((rutas)=>{%>   
                     <tr>
-                       
+                      <td><%=rutas._id%></td>
+                      <td><%=rutas.nombre%></td>
+                      <td><%=rutas.origen%></td>
+                      <td><%=rutas.destino%></td>
+                      <td><%=rutas.fecha_salida%></ts>
+                      <td><%=rutas.fecha_llegada%></td>
+                      <td><%=rutas.precio%></td>
+                      <td>
+                        <form action="/delteruta_<%=rutas._id%>" method="post">
+                            <button>Eliminar</button>
+                        </form>
+                    </td>  
                     </tr>
                 <%})%>
             </tbody>

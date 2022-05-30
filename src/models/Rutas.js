@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
-const moment = require('moment')
+const moment = require('moment');
+const { isDate } = require('moment');
 const  Schema = mongoose.Schema;
 
 const RutasSchema = new Schema({
+    id: {type: Number, auto:true},
     nombre: {type:String, required: true},
     origen: {type: String, require: true},
     destino: {type: String, require:true},
-    fecha_salida: {type: Date, require: true},
-    fecha_llegada: {type: Date, required:true},
-    salida: {type: Date, required: true},
-    llegada: {type: Date, required:true},
-    precio: {type: Number, required: true},
-    cupos: {type: Number, required: true}
+    fecha_salida: {type: Date},
+    fecha_llegada: {type: Date, require:true},
+    precio: {type: Number, require: true},
+    cupos: {type: Number, require: true}
 });
 
 
