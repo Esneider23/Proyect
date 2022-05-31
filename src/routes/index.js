@@ -43,9 +43,6 @@ router.get('/usuarios', isAuthenticated, async (req,res)=>{
     res.render('usuarios', {users});
 })
 
-router.get('/Cartagena', (req, res)=>{
-    res.render('Cartagena');
-})
 
 router.get('/destino',(req,res)=>{
     res.render('destino');
@@ -66,6 +63,25 @@ router.get('/Crear_rutas', isAuthenticated, async (req, res)=>
 {
     res.render('registrar_rutas');
 })
+
+router.get('/Cartagena', (req, res)=>{
+    res.render('Cartagena');
+})
+
+router.get('/medellin', (req,res)=>{
+    res.render('Medellin')
+})
+
+router.get('/Cali', (req,res)=>
+{
+    res.render("Cali")
+})
+
+router.get('/Barranquilla', (req,res)=>
+{
+    res.render('Barranquilla');
+})
+
 
 router.post('/update_:id', controller.update);
 router.post('/delete_:id', controller.delete);

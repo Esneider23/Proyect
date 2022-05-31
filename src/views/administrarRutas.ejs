@@ -66,6 +66,7 @@
         </div>
     </div>
 
+  
     <main>
         <div align="right">
             <br>
@@ -100,8 +101,8 @@
                       <td><%=rutas.nombre%></td>
                       <td><%=rutas.origen%></td>
                       <td><%=rutas.destino%></td>
-                      <td><%=rutas.fecha_salida%></ts>
-                      <td><%=rutas.fecha_llegada%></td>
+                      <td><%=rutas.fecha_salida%> - <%=rutas.hsalida%></ts>
+                      <td><%=rutas.fecha_llegada%> - <%=rutas.hllegada%></td>
                       <td><%=rutas.precio%></td>
                       <td>
                         <form action="/delteruta_<%=rutas._id%>" method="post">
@@ -116,6 +117,9 @@
     </main>
 
     <script src="resources/css/script.js"></script>
+
+    <script src="moment.js"></script>
+    
 </body>
 </html>
 

@@ -33,10 +33,6 @@
     list-style: none;
 }
 
-#saber{
-    font-size: 170%;
-}
-
 #contenido{
     font-size: 100%;
 }
@@ -53,4 +49,10 @@ button{
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    transition: .3s ease all;
+}
+
+button:hover{
+    background-color: #4d5b2a;
+    color: rgb(255, 255, 255);
 }

@@ -107,34 +107,42 @@
 
                         <div class="col">
                             <div class="form-group">
-                            <label>Fecha de salida</label>
-                            <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_salida" name="fecha_salida" >
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                            <label>Fecha de llegada</label>
-                            <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_llegada" name="fecha_llegada">
-                        </div>
+                                <label>Fecha de salida</label>
+                                <input type="date" name="fecha_salida" min="2022-05-29" max="2022-12-31">
+                            </div>
                         </div>
                     </div>
-
                     <div class="row">
-                        
+
                         <div class="col">
                             <div class="form-group">
-                                <label> Precio</label>
-                                <input type="number" min="0" id="precio" name="precio" style="width: auto;" >
+                                <label>Hora de salida</label>
+                                <input type="time" id = "hsalida" name="hsalida" style="width: 90%;">
                             </div>
                         </div>
 
                         <div class="col">
                             <div class="form-group">
-                                <label> Cupos</label>
-                                <input type="number" min="0" id="cupos" name="cupos" style="height: 110%; width:42%;">
+                                <label>Fecha de llegada</label>
+                                <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_llegada" name="fecha_llegada" style="width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Hora de llegada</label>
+                                <input type="time" id = "hllegada" name="hllegada" style="width: 90%;">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <label> Precio</label>
+                                <input type="number" min="0" id="precio" name="precio" style="width: 90%;" >
                             </div>
                         </div>
                     </div>
@@ -174,12 +182,6 @@
             var des = document.getElementById('destino')
             
             document.getElementById('showId').value = ori.value + ' - ' + des.value;
-        }
-
-        function fecha(e)
-        {
-            var fecha = moment(e.value);
-            console.log(fecha.format("DD/MM/YYYY"));
         }
     </script>
 </body>

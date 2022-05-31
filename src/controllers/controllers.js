@@ -2,6 +2,7 @@ const User = require('../models/User');
 const passport = require('passport');
 const Rutas = require('../models/Rutas');
 const moment = require('moment');
+const fecha = require('../models/Rutas');
 
 exports.Signup = async (req, res)=>{
    const name = req.body.user;
@@ -28,9 +29,11 @@ exports.Createrute = async (req, res)=>
     const fecha_salida = req.body.fecha_salida;
     const fecha_llegada = req.body.fecha_llegada;
     const precio = req.body.precio;
-    const cupos = req.body.cupos;
-    const newRuta = new Rutas({nombre,origen,destino,fecha_salida,fecha_llegada,precio,cupos});
+    const hsalida = req.body.hsalida;
+    const hllegada = req.body.hllegada;
+    const newRuta = new Rutas({nombre,origen,destino,fecha_salida,fecha_llegada,precio,hsalida,hllegada});
     await newRuta.save();
+    console.log(newRuta);
     res.redirect('/adminrutas');
 
 }

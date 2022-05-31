@@ -42,5 +42,11 @@ button{
     text-align: center;
     cursor: pointer;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
+    transition: .3s ease all;  
+}
+
+button:hover{
+    background-color: #4d5b2a;
+    color: rgb(255, 255, 255);
 }
