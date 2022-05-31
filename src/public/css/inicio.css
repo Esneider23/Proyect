@@ -188,6 +188,17 @@ body {
     color: #515151;
     text-align: justify;
 }
+
+#divcale{
+    background: #4d8fe6;
+    border-radius: 13px;
+}
+
+label{
+    height: 100px;
+    background-color: #4d8fe6;
+}
+
 @media (max-width: 1000px) {
     .form-inicio {
         background: #004aad;
@@ -254,3 +265,4 @@ body {
         margin: 20px 0 0 0;   
     }
 }
+

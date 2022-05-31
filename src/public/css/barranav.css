@@ -55,15 +55,18 @@
     .navbar ul {
         flex-wrap: wrap;
         padding: 0px 5px;
+        
     }
     .navbar-toggle {
         display: block;
+        
     }
     .navbar-links {
         display: none;
         width: 100%;
         text-align: center;
         padding: auto;
+        transition: .5s;
     }
 
     .active {
@@ -73,4 +76,5 @@
 
 .actual-page {
     border-bottom: solid 3px white;
+    transition: .5s ease all;
 }

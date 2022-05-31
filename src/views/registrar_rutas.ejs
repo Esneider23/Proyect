@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,36 +10,37 @@
     <link rel="stylesheet" href="resources/css/estilos.css">
     <link rel="stylesheet" href="resources/css/perfil">
     <link rel="stylesheet" href="resources/css/registrar_r.css">
-    
+
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <script src="https://momentjs.com/downloads/moment.js"></script>
 </head>
+
 <body id="body">
     <header>
         <div class="icon__menu">
-            <i class="fas fa-bars"  href="/index" id="btn_open"></i>
+            <i class="fas fa-bars" href="/index" id="btn_open"></i>
         </div>
     </header>
 
     <div class="menu__side" id="menu_side">
 
         <div class="name__page">
-            <img src="resources/img/Logo3.png" width="50"/>
+            <img src="resources/img/Logo3.png" width="50" />
             <h5>Advance Travel</h5>
         </div>
 
-        <div class="options__menu">	
+        <div class="options__menu">
 
             <a href="/index">
-                <div class="option">    
+                <div class="option">
                     <i class="fas fa-home" title="Inicio"></i>
                     <h4>Inicio</h4>
                 </div>
             </a>
-            
+
             <a href="/adminrutas" class="selected">
                 <div class="option">
-                   <i class="fa-solid fa-calendar-days"></i>
+                    <i class="fa-solid fa-calendar-days"></i>
                     <h4>Administrar horarios</h4>
                 </div>
             </a>
@@ -50,7 +52,7 @@
                 </div>
             </a>
             <a href="/perfil">
-                <div class="option">    
+                <div class="option">
                     <i class="fa-solid fa-user" title="Perfil"></i>
                     <h4>Perfil</h4>
                 </div>
@@ -58,7 +60,8 @@
 
             <a href="/logout">
                 <div class="option">
-                    <i class="fa-solid fa-arrow-right-from-bracket" title="Cerrar sesion" style="background-image: white; "></i>
+                    <i class="fa-solid fa-arrow-right-from-bracket" title="Cerrar sesion"
+                        style="background-image: white; "></i>
                     <h4>Cerrar sesion</h4>
                 </div>
             </a>
@@ -66,104 +69,105 @@
     </div>
 
     <main>
-            <form action="/CreateRuta" method="post">
-                <div class="card">
-                    <h1>Rutas y horarios</h1>
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" id="showId" name="nombre" readonly>
-                            </div>
-                        </div>
-                        
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Origen</label>
-                                <select name="origen" id="origen" onchange="cambioOpciones();" >
-                                    <option value="Cartagena">Cartagena</option>
-                                    <option value="Cali">Cali</option>
-                                    <option value="Barranquilla">Barranquilla</option>
-                                    <option value="Bucaramanga">Bucaramanga</option>
-                                    <option value="Medellin">Medellin</option>
-                                </select>
-                            </div>
+        <form action="/CreateRuta" method="post">
+            <div class="card">
+                <h1>Rutas y horarios</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" id="showId" name="nombre" readonly>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Destino</label>
-                                <select name="destino" id="destino" onchange="cambioOpciones();" >
-                                    <option value="Cartagena">Cartagena</option>
-                                    <option value="Cali">Cali</option>
-                                    <option value="Barranquilla">Barranquilla</option>
-                                    <option value="Bucaramanga">Bucaramanga</option>
-                                    <option value="Medellin">Medellin</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Fecha de salida</label>
-                                <input type="date" name="fecha_salida" min="2022-05-29" max="2022-12-31">
-                            </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Origen</label>
+                            <select name="origen" id="origen" onchange="cambioOpciones();">
+                                <option value="Cartagena">Cartagena</option>
+                                <option value="Cali">Cali</option>
+                                <option value="Barranquilla">Barranquilla</option>
+                                <option value="Bucaramanga">Bucaramanga</option>
+                                <option value="Medellin">Medellin</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row">
-
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Hora de salida</label>
-                                <input type="time" id = "hsalida" name="hsalida" style="width: 90%;">
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Fecha de llegada</label>
-                                <input type="date" min="2022-05-29" max="2022-12-31" id = "fecha_llegada" name="fecha_llegada" style="width: 90%;">
-                            </div>
-                        </div>
-                    </div>
-                
-
-                    <div class="row">
-
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Hora de llegada</label>
-                                <input type="time" id = "hllegada" name="hllegada" style="width: 90%;">
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="form-group">
-                                <label> Precio</label>
-                                <input type="number" min="0" id="precio" name="precio" style="width: 90%;" >
-                            </div>
-                        </div>
-                    </div>
-
-                    <center>
-                        <div class="row">
-                            <div class="col">
-                                <button id="crear">
-                                   <h1>crear</h1>
-                                </button>
-                            </div>
-                            <div class="col">
-                                <a href="/adminrutas">
-                                    <button id="crear">
-                                        <h1>Cancelar</h1>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </center>
                 </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Destino</label>
+                            <select name="destino" id="destino" onchange="cambioOpciones();">
+                                <option value="Cartagena">Cartagena</option>
+                                <option value="Cali">Cali</option>
+                                <option value="Barranquilla">Barranquilla</option>
+                                <option value="Bucaramanga">Bucaramanga</option>
+                                <option value="Medellin">Medellin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Fecha de salida</label>
+                            <input type="date" name="fecha_salida" min="2022-05-29" max="2022-12-31">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Hora de salida</label>
+                            <input type="time" id="hsalida" name="hsalida" style="width: 90%;">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Fecha de llegada</label>
+                            <input type="date" min="2022-05-29" max="2022-12-31" id="fecha_llegada" name="fecha_llegada"
+                                style="width: 90%;">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Hora de llegada</label>
+                            <input type="time" id="hllegada" name="hllegada" style="width: 90%;">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label> Precio</label>
+                            <input type="number" min="0" id="precio" name="precio" style="width: 90%;">
+                        </div>
+                    </div>
+                </div>
+
+                <center>
+                    <div class="row">
+                        <div class="col">
+                            <button id="crear">
+                                <h1>crear</h1>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <a href="/adminrutas">
+                                <button id="crear">
+                                    <h1>Cancelar</h1>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </center>
+            </div>
             </div>
         </form>
     </main>
@@ -174,16 +178,14 @@
 
         // funcion que se ejecuta cada vez que se selecciona una opción
 
-        function cambioOpciones()
-
-        {
+        function cambioOpciones() {
 
             var ori = document.getElementById('origen');
             var des = document.getElementById('destino')
-            
+
             document.getElementById('showId').value = ori.value + ' - ' + des.value;
         }
     </script>
 </body>
-</html>
 
+</html>
