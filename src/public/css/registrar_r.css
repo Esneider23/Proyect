@@ -6,6 +6,11 @@ body {
     justify-content: center;
 }
 
+h1
+{
+    color: white;
+}
+
 .card
 {
     width: 70%;
@@ -104,5 +109,14 @@ select option
 
 #crear
 {
-
+    width: 60%;
+    height: 110%;
+    background: transparent;
+    outline: none;
+    font-size: 12px;
+    padding: 0 0 0px 0px;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border-radius: 50px;      
 }

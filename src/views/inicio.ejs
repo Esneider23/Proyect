@@ -6,34 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advance Travel</title>
+  <!--<link rel="stylesheet" href="resources/css/barranav.css">-->
   <link rel="stylesheet" href="resources/css/barranav.css">
   <link rel="stylesheet" href="resources/css/footer.css">
   <link rel="stylesheet" href="resources/css/inicio.css">
   <link rel="icon" href="resources/img/Logo3.png">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="resources/css/barranav.js" defer></script>
 </head>
 
 <body>
-  <nav>
-    <div id="nav-container">
-      <a href="/">
-        <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="30" height="24">
-      </a>
+  <nav class="navbar">
+    <ul>
+      <li class="navbar-logo" padding="0" margin="0">
+        <a href="/">
+          <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="auto" height="58">
+        </a>
+      </li>
 
-      <div class="nav-right">
-        <a class="nav-botton" href="/">
-          <span id="actual-page">
-            Inicio
-          </span>
-        </a>
-        <a class="nav-botton" href="/rutas">
-          Rutas
-        </a>
-        <a class="nav-botton" href="/signin">
-          Log In
-        </a>
-      </div>
-    </div>
-  </nav>
+      <li class="navbar-toggle"><i class="fas fa-bars"></i></li>
+      <li class="navbar-links actual-page" id="inicio_">Inicio</li>
+      <li class="navbar-links" id="rutas_">Rutas</li>
+      <li class="navbar-links" id="login_">Log In</li>
+    </ul>
+  </nav> 
 
   <div class="carousel">
     <div class="carousel__item" id="carousel_1">
@@ -50,7 +46,7 @@
 
   <div id="container-offer">
     <h3 id="title_offers">¡OFERTAS ESPECIALES!</h3>
-    <div id="div_provicional">
+    <div class="scroller">
       <a href="/Medellin">
         <div class="offer">
           <img class="img_offer" src="resources/img/medellin.png" alt="">
@@ -193,8 +189,7 @@
     <center>
       <div id="ultimo">
         <p id="pe">
-          Buses 2022
-          <img id="certificado" src="resources/img/certificacion.png" alt="cerfificasion">
+          Buses 2022 &copy;
         </p>
       </div>
     </center>

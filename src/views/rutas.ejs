@@ -13,30 +13,27 @@
   <link rel="stylesheet" href="resources/css/popup.css">
   <link rel="icon" href="resources/img/Logo3.png">
   <enlace href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600| Open+Sans" rel="hoja de estilo">
+  </enlace>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="resources/css/barranav.js" defer></script>
+  <script type="text/javascript" src="resources/css/rutas.js" defer></script>
+
 </head>
 
 <body>
+  <nav class="navbar">
+    <ul>
+      <li class="navbar-logo" padding="0" margin="0">
+        <a href="/">
+          <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="auto" height="58">
+        </a>
+      </li>
 
-  <nav>
-    <div id="nav-container">
-      <a href="/">
-        <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="30" height="24">
-      </a>
-
-      <div class="nav-right">
-        <a class="nav-botton" href="/">
-            Inicio
-        </a>
-        <a class="nav-botton" href="/rutas">
-          <span id="actual-page">
-            Rutas
-          </span>
-        </a>
-        <a class="nav-botton" href="/signin">
-          Log In
-        </a>
-      </div>
-    </div>
+      <li class="navbar-toggle"><i class="fas fa-bars"></i></li>
+      <li class="navbar-links" id="inicio_">Inicio</li>
+      <li class="navbar-links actual-page" id="rutas_">Rutas</li>
+      <li class="navbar-links" id="login_">Log In</li>
+    </ul>
   </nav>
 
   <div id="cuerpo">
@@ -44,156 +41,84 @@
       <div>
         <h1 id="titulo1">¡Nuestros destinos!</h1>
       </div>
-      <fagmento>
-        <container>
-          <div id="destino1">
-            <table CELLPADDING=5 CELLSPACING=5>
-              <center>
-                <tr>
-                  <td WIDTH="22%">
-                    <img id="img1"
-                      src="https://www.elagoradiario.com/wp-content/uploads/2021/02/vista-Cartagena-de-Indias-Colombia-1140x600.jpg"
-                      alt="Cartagena de Indias">
-                  </td>
-                  <td id="contenido" WIDTH="40%" VALIGN=top>
-                    <h2 id="parrafo1">Cartagena de Indias</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Nihil et nulla quaerat velit exercitationem
-                      recusandae optio, placeat ab natus id a animi
-                      facilis reiciendis dolor distinctio quidem fugit
-                      autem tempore?</p>
-                  </td>
-                  <td ALIGN=center>
-                    <button class="abrir-popup" id="abrir-popup">
-                      <h2>¡Saber mas!</h2>
-                    </button>
-                  </td>
-                </tr>
-              </center>
-            </table>
+      <div class="rutas">
+        <div class="img-ruta">
+          <img src="/resources/img/medellin.png" alt="Medellin">
+        </div>
+        <div class="descripcion-ruta">
+          <h2>Medellin</h2>
+          <p>
+            Medellín es la capital de la provincia montañosa de Antioquia en Colombia. Es apodada la "Ciudad de la
+            eterna primavera" por su clima templado y alberga la famosa Feria de las Flores anual. El moderno Metrocable
+            conecta la ciudad con los barrios circundantes.
+          </p>
+        </div>
+        <div class="boton-saber-mas">
+          <div class="boton" id="medellin_">
+            <p>Saber más</p>
           </div>
-          <br />
-        </container>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="rutas">
+        <div class="img-ruta">
+          <img src="/resources/img/cali.jpg" alt="Cartagena de Indias">
+        </div>
+        <div class="descripcion-ruta">
+          <h2>Cali</h2>
+          <p>
+            Cali es una ciudad colombiana ubicada en el departamento del Valle del Cauca, al suroeste de Bogotá. Es
+            conocida por el baile de la salsa, del que hay muchos clubes en el suburbio de Juanchito. En el barrio más
+            antiguo de Cali, la catedral neoclásica de San Pedro alberga pinturas de la Escuela de Quito.
+          </p>
+        </div>
+        <div class="boton-saber-mas">
+          <div class="boton" id="cali_">
+            <p>Saber más</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="rutas">
+        <div class="img-ruta">
+          <img src="/resources/img/cartagena.png" alt="Cartagena de Indias">
+        </div>
+        <div class="descripcion-ruta">
+          <h2>Cartagena de Indias</h2>
+          <p>
+            Cartagena de Indias es una ciudad de Colombia, ubicada en el departamento de Bolívar, en el
+            norte de Colombia. Es la capital del departamento de Bolívar con hermosas playas, lugar turistico por
+            exelencia.
+          </p>
+        </div>
+        <div class="boton-saber-mas">
+          <div class="boton" id="cartagena_">
+            <p>Saber más</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="rutas">
+        <div class="img-ruta">
+          <img src="/resources/img/barranquilla.jpg" alt="Cartagena de Indias">
+        </div>
+        <div class="descripcion-ruta">
+          <h2>Barranquilla</h2>
+          <p>
+            Barranquilla, es la capital del departamento Atlántico de Colombia y es un desbordante puerto marino,
+            bordeado por el río Magdalena. La ciudad es conocida por su enorme Carnaval, que reúne a artistas con
+            extravagantes disfraces, carros elaborados y música cumbia.
+          </p>
+        </div>
+        <div class="boton-saber-mas" id="barranquilla_">
+          <div class="boton" >
+            <p>Saber más</p>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="clearfix"></div>
 
-        <container>
-          <div id="destino1">
-            <table CELLPADDING=5 CELLSPACING=5>
-              <center>
-                <tr>
-                  <td WIDTH="22%">
-                    <img id="img1"
-                      src="https://www.semana.com/resizer/ZFSCePm535z9OiZLw8yoUfKEZj4=/1200x675/filters:format(jpg):quality(50)//cloudfront-us-east-1.images.arcpublishing.com/semana/SXKRYNHTJBDJFKVSQXEUSD7PNU.jpg"
-                      alt="Cali">
-                  </td>
-                  <td WIDTH="40%" VALIGN=top>
-                    <h2>Cali</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Nihil et nulla quaerat velit exercitationem
-                      recusandae optio, placeat ab natus id a animi
-                      facilis reiciendis dolor distinctio quidem fugit
-                      autem tempore?</p>
-                  </td>
-                  <td ALIGN=center>
-                    <button class="abrir-popup2" id="abrir-popup2">
-                      <h2>¡Saber mas!</h2>
-                    </button>
-                  </td>
-                </tr>
-              </center>
-            </table>
-          </div>
-          <br />
-        </container>
-
-        <container>
-          <div id="destino1">
-            <table CELLPADDING=5 CELLSPACING=5>
-              <center>
-                <tr>
-                  <td WIDTH="22%">
-                    <img id="img1"
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bucaramanga_3_Sder_Col_enr_2022.jpg/1920px-Bucaramanga_3_Sder_Col_enr_2022.jpg"
-                      alt="Bucaramanga">
-                  </td>
-                  <td WIDTH="40%" VALIGN=top>
-                    <h2>Bucaramanga</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Nihil et nulla quaerat velit exercitationem
-                      recusandae optio, placeat ab natus id a animi
-                      facilis reiciendis dolor distinctio quidem fugit
-                      autem tempore?</p>
-                  </td>
-                  <td ALIGN=center>
-                    <button class="abrir-popup3" id="abrir-popup3">
-                      <h2>¡Saber mas!</h2>
-                    </button>
-                  </td>
-                </tr>
-              </center>
-            </table>
-          </div>
-          <br />
-        </container>
-
-        <container>
-          <div id="destino1">
-            <table CELLPADDING=5 CELLSPACING=5>
-              <center>
-                <tr>
-                  <td WIDTH="22%">
-                    <img id="img1"
-                      src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a2/58/15/plaza-san-nicolas.jpg?w=700&h=-1&s=1"
-                      alt="Barranquilla">
-                  </td>
-                  <td WIDTH="40%" VALIGN=top>
-                    <h2>Barranquilla</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Nihil et nulla quaerat velit exercitationem
-                      recusandae optio, placeat ab natus id a animi
-                      facilis reiciendis dolor distinctio quidem fugit
-                      autem tempore?</p>
-                  </td>
-                  <td ALIGN=center>
-                    <button class="abrir-popup4" id="abrir-popup4">
-                      <h2>¡Saber mas!</h2>
-                    </button>
-                  </td>
-                </tr>
-              </center>
-            </table>
-          </div>
-          <br />
-        </container>
-
-        <container>
-          <div id="destino1">
-            <table CELLPADDING=5 CELLSPACING=5>
-              <center>
-                <tr>
-                  <td WIDTH="22%">
-                    <img id="img1" src="https://www.duna.cl/media/2021/07/Medell%C3%ADn-foto-ProColombia.jpg"
-                      alt="Medellin">
-                  </td>
-                  <td WIDTH="40%" VALIGN=top>
-                    <h2>Medellin</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit. Nihil et nulla quaerat velit exercitationem
-                      recusandae optio, placeat ab natus id a animi
-                      facilis reiciendis dolor distinctio quidem fugit
-                      autem tempore?</p>
-                  </td>
-                  <td ALIGN=center>
-                    <button class="abrir-popup5" id="abrir-popup5">
-                      <h2>¡Saber mas!</h2>
-                    </button>
-                  </td>
-                </tr>
-              </center>
-            </table>
-          </div>
-          <br />
-        </container>
-      </fagmento>
     </div>
   </div>
 
@@ -207,7 +132,8 @@
         Vigilado Super intendencia de transporte y el gobierno ncional.
       </p>
       <ul id="ul-footer">
-        <li class="li-footer"><a href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
+        <li class="li-footer"><a
+            href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
             <img src="resources/img/facebook.png" alt="Logo de facebook" class="icon_social_media">
           </a>
         </li>
@@ -264,102 +190,12 @@
     <center>
       <div id="ultimo">
         <p id="pe">
-          Buses 2022
-          <img id="certificado" src="resources/img/certificacion.png" alt="cerfificasion">
+          Buses 2022 &copy;
         </p>
       </div>
     </center>
   </footer>
-
-  <div class="overlay" id="overlay.active">
-    <div class="popup" id="popup">
-      <a href="#" id="btn-cerrar" class="btn-cerrar"><i class="fas fa-times"></i></a>
-      <h2>Cartagena</h2>
-      <img
-        src="https://www.elagoradiario.com/wp-content/uploads/2021/02/vista-Cartagena-de-Indias-Colombia-1140x600.jpg"
-        alt="Cartagena de Indias">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nihil et nulla quaerat velit exercitationem
-        recusandae optio, placeat ab natus id a animi
-        facilis reiciendis dolor distinctio quidem fugit
-        autem tempore?</p>
-      <form action="/destino">
-        <input type="submit" class="btn-submit" value="Comprar voletos">
-      </form>
-    </div>
-  </div>
-
-  <div class="overlay2" id="overlay2">
-    <div class="popup2" id="popup2">
-      <a href="#" id="btn-cerrar2" class="btn-cerrar"><i class="fas fa-times"></i></a>
-      <h2>Cali</h2>
-      <img
-        src="https://www.semana.com/resizer/ZFSCePm535z9OiZLw8yoUfKEZj4=/1200x675/filters:format(jpg):quality(50)//cloudfront-us-east-1.images.arcpublishing.com/semana/SXKRYNHTJBDJFKVSQXEUSD7PNU.jpg"
-        alt="Cali">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nihil et nulla quaerat velit exercitationem
-        recusandae optio, placeat ab natus id a animi
-        facilis reiciendis dolor distinctio quidem fugit
-        autem tempore?</p>
-      <form action="/destino">
-        <input type="submit" class="btn-submit" value="Comprar voletos">
-      </form>
-    </div>
-  </div>
-
-  <div class="overlay3" id="overlay3">
-    <div class="popup3" id="popup3">
-      <a href="#" id="btn-cerrar3" class="btn-cerrar"><i class="fas fa-times"></i></a>
-      <h2>Bucaramanga</h2>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bucaramanga_3_Sder_Col_enr_2022.jpg/1920px-Bucaramanga_3_Sder_Col_enr_2022.jpg"
-        alt="Bucaramanga">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nihil et nulla quaerat velit exercitationem
-        recusandae optio, placeat ab natus id a animi
-        facilis reiciendis dolor distinctio quidem fugit
-        autem tempore?</p>
-      <form action="/destino">
-        <input type="submit" class="btn-submit" value="Comprar voletos">
-      </form>
-    </div>
-  </div>
-
-  <div class="overlay4" id="overlay4">
-    <div class="popup4" id="popup4">
-      <a href="#" id="btn-cerrar4" class="btn-cerrar"><i class="fas fa-times"></i></a>
-      <h2>Barranquilla</h2>
-      <img
-        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a2/58/15/plaza-san-nicolas.jpg?w=700&h=-1&s=1"
-        alt="Barranquilla">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nihil et nulla quaerat velit exercitationem
-        recusandae optio, placeat ab natus id a animi
-        facilis reiciendis dolor distinctio quidem fugit
-        autem tempore?</p>
-      <form action="/destino">
-        <input type="submit" class="btn-submit" value="Comprar voletos">
-      </form>
-    </div>
-  </div>
-
-  <div class="overlay5" id="overlay5">
-    <div class="popup5" id="popup5">
-      <a href="#" id="btn-cerrar5" class="btn-cerrar"><i class="fas fa-times"></i></a>
-      <h2>Medellin</h2>
-      <img src="https://www.duna.cl/media/2021/07/Medell%C3%ADn-foto-ProColombia.jpg" alt="Medellin">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Nihil et nulla quaerat velit exercitationem
-        recusandae optio, placeat ab natus id a animi
-        facilis reiciendis dolor distinctio quidem fugit
-        autem tempore?</p>
-      <form action="/destino">
-        <input type="submit" class="btn-submit" value="Comprar voletos">
-      </form>
-    </div>
-  </div>
-
-  <script src="popup.js"></script>
+  <script src="views/popup.js"></script>
 </body>
 
 </html>
