@@ -186,6 +186,7 @@ body {
 #paragraph-text-inicio {
     font-size: 19px;
     color: #515151;
+    text-align: justify;
 }
 @media (max-width: 1000px) {
     .form-inicio {
