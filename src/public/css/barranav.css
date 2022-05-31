@@ -18,12 +18,15 @@
 .navbar-links {
     list-style-type: none;
     padding: 1rem;
+    border-radius: 3px;
+    transition: .5s ease all;
 }
 
 .navbar-links:hover {
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
     color: black;
+    border-radius: 7px;
 }
 
 .navbar a {

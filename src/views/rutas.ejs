@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advance Travel</title>
+  <title>AT Rutas</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" href="resources/css/barranav.css">
   <link rel="stylesheet" href="resources/css/footer.css">
@@ -41,8 +41,6 @@
       <div>
         <h1 id="titulo1">¡Nuestros destinos!</h1>
       </div>
-
-       
       <div class="rutas">
         <div class="img-ruta">
           <img src="/resources/img/barranquilla.jpg" alt="Cartagena de Indias">
@@ -55,15 +53,14 @@
             extravagantes disfraces, carros elaborados y música cumbia.
           </p>
         </div>
-        <div class="boton-saber-mas" id="barranquilla_">
-          <div class="boton" >
+        <div class="boton-saber-mas" >
+          <div class="boton" id="barranquilla">
             <p>Saber más</p>
           </div>
         </div>
         <div class="clearfix"></div>
       </div>
 
-      
       <div class="rutas">
         <div class="img-ruta">
           <img src="/resources/img/cali.jpg" alt="Cartagena de Indias">
@@ -124,8 +121,8 @@
         </div>
         <div class="clearfix"></div>
       </div>
-      
-    
+
+
       <div class="clearfix"></div>
 
     </div>
@@ -204,7 +201,96 @@
       </div>
     </center>
   </footer>
-  <script src="views/popup.js"></script>
+
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <a href="#" id="btn-cerrar" class="btn-cerrar"><i class="fas fa-times"></i></a>
+      <h2>Cartagena</h2>
+      <img
+        src="https://www.elagoradiario.com/wp-content/uploads/2021/02/vista-Cartagena-de-Indias-Colombia-1140x600.jpg"
+        alt="Cartagena de Indias">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nihil et nulla quaerat velit exercitationem
+        recusandae optio, placeat ab natus id a animi
+        facilis reiciendis dolor distinctio quidem fugit
+        autem tempore?</p>
+      <form action="/destino">
+        <input type="submit" class="btn-submit" value="Comprar voletos">
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay2" id="overlay2">
+    <div class="popup2" id="popup2">
+      <a href="#" id="btn-cerrar2" class="btn-cerrar"><i class="fas fa-times"></i></a>
+      <h2>Cali</h2>
+      <img
+        src="https://www.semana.com/resizer/ZFSCePm535z9OiZLw8yoUfKEZj4=/1200x675/filters:format(jpg):quality(50)//cloudfront-us-east-1.images.arcpublishing.com/semana/SXKRYNHTJBDJFKVSQXEUSD7PNU.jpg"
+        alt="Cali">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nihil et nulla quaerat velit exercitationem
+        recusandae optio, placeat ab natus id a animi
+        facilis reiciendis dolor distinctio quidem fugit
+        autem tempore?</p>
+      <form action="/destino">
+        <input type="submit" class="btn-submit" value="Comprar voletos">
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay3" id="overlay3">
+    <div class="popup3" id="popup3">
+      <a href="#" id="btn-cerrar3" class="btn-cerrar"><i class="fas fa-times"></i></a>
+      <h2>Bucaramanga</h2>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Bucaramanga_3_Sder_Col_enr_2022.jpg/1920px-Bucaramanga_3_Sder_Col_enr_2022.jpg"
+        alt="Bucaramanga">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nihil et nulla quaerat velit exercitationem
+        recusandae optio, placeat ab natus id a animi
+        facilis reiciendis dolor distinctio quidem fugit
+        autem tempore?</p>
+      <form action="/destino">
+        <input type="submit" class="btn-submit" value="Comprar voletos">
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay4" id="overlay4">
+    <div class="popup4" id="popup4">
+      <a href="#" id="btn-cerrar4" class="btn-cerrar"><i class="fas fa-times"></i></a>
+      <h2>Barranquilla</h2>
+      <img
+        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/a2/58/15/plaza-san-nicolas.jpg?w=700&h=-1&s=1"
+        alt="Barranquilla">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nihil et nulla quaerat velit exercitationem
+        recusandae optio, placeat ab natus id a animi
+        facilis reiciendis dolor distinctio quidem fugit
+        autem tempore?</p>
+      <form action="/destino">
+        <input type="submit" class="btn-submit" value="Comprar voletos">
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay5" id="overlay5">
+    <div class="popup5" id="popup5">
+      <a href="#" id="btn-cerrar5" class="btn-cerrar"><i class="fas fa-times"></i></a>
+      <h2>Medellin</h2>
+      <img src="https://www.duna.cl/media/2021/07/Medell%C3%ADn-foto-ProColombia.jpg" alt="Medellin">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nihil et nulla quaerat velit exercitationem
+        recusandae optio, placeat ab natus id a animi
+        facilis reiciendis dolor distinctio quidem fugit
+        autem tempore?</p>
+      <form action="/destino">
+        <input type="submit" class="btn-submit" value="Comprar voletos">
+      </form>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 
 </html>

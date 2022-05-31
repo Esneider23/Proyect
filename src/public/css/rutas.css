@@ -1,8 +1,6 @@
 body {
     background: #d8d9d4;
-
 }
-
 
 h2 {
     padding: 20px 0;
@@ -48,8 +46,6 @@ h1 {
     margin: 2% 0;
 }
 
-
-
 .boton-saber-mas {
     float: right;
     text-align: center;
@@ -58,12 +54,12 @@ h1 {
 }
 
 .boton {
-
     border-radius: 10px;
     background-color: #b8ed36;
     width: 200px;
     padding: 8%;
     font-weight: bold;
+    transition: .3s ease all;
 }
 
 .boton:hover {
