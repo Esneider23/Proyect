@@ -35,7 +35,7 @@
     <div class="izquierda">
       <img src="resources/img/Logo3.png" alt="" width="100%" height="auto">
       <h3>Cantidad de boletas:</h3>
-      <input type="number" class="quantify" name="cantidad_boletas" id="cant_boletas" min="1" max="5" value="1">
+      <input type="number" class="quantify" name="cantidad_boletas" id="cant_boletas" min="1" max="5" value="1" onchange="valor()">
     </div>
     <div class="derecha">
       <div class="sub_derecha">
@@ -61,16 +61,18 @@
           </p>
           <br>
           <h4>Valor unidad:</h4>
-          <a id="precio">
-            <h2> $ <%=ruta.precio%></h2>
-          </a>
+            <h2>$<%=ruta.precio%></h2>
+            <input type="hidden" id="precio" value="<%=ruta.precio%>" onchange="valor()" style="font-weight: 100px;">
         </div>
       </div>
       
       <a href="/compra" style="text-decoration: none; color: black;">
       <div class="comprar_tiquete">
-        <h4>Total: </h4>
-          <h2></h2>
+        <h4>Total:         
+        </h4>
+        <h2> 
+          <input type="text" id="total" readonly>
+        </h2>
             <button type="submit">
               Comprar
             </button>
@@ -152,6 +154,14 @@
       </div>
     </center>
   </footer>
-</body>
 
+  <script>
+    function valor()
+    {
+      var cantidad = document.getElementById('cant_boletas').value;
+      var precio = document.getElementById('precio').value;
+      document.getElementById('total').value = '$'+ cantidad * precio;
+    }
+  </script>
+</body>
 </html>

@@ -102,3 +102,10 @@ h1 {
     background-color: rgb(79, 155, 4);
     color: white;
 }
+
+.container input
+{
+    margin-top: 10px;
+    text-align: center;
+    border: transparent;
+}
