@@ -2,164 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advance Travel</title>
-    <link rel="icon" href="resources/img/Logo3.png">
-    <link rel="stylesheet" href="resources/css/estilos.css">
-    <link rel="stylesheet" href="resources/css/perfil.css">
-    <link rel="stylesheet" href="resources/css/actualizar.css">
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Travel</title>
+  <link rel="icon" href="resources/img/Logo3.png">
+  <link rel="stylesheet" href="resources/css/estilos.css">
+  <link rel="stylesheet" href="resources/css/perfil.css">
+  <link rel="stylesheet" href="resources/css/actualizar.css">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
-    <header>
-        <div class="icon__menu">
-            <i class="fas fa-bars" href="/index" id="btn_open"></i>
-        </div>
-    </header>
-    <div class="menu__side" id="menu_side">
-        <div class="name__page">
-            <img src="resources/img/Logo3.png" width="50" />
-            <h5>Advance Travel</h5>
-        </div>
-        <div class="options__menu">
-            <a href="/index">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <h4>Inicio</h4>
-                </div>
-            </a>
-            <a href="/adminrutas">
-                <div class="option">
-                   <i class="fa-solid fa-calendar-days"></i>
-                    <h4>Administrar horarios</h4>
-                </div>
-            </a>
-            <a href="/usuarios">
-                <div class="option">
-                    <i class="fa-solid fa-users" title="usuarios"></i>
-                    <h4>Usuarios</h4>
-                </div>
-            </a>
-            <a href="/perfil">
-                <div class="option">
-                    <i class="fa-solid fa-user" title="Perfil"></i>
-                    <h4>Perfil</h4>
-                </div>
-            </a>
-            <a href="/logout">
-                <div class="option">
-                    <i class="fa-solid fa-arrow-right-from-bracket" title="Cerrar sesion"
-                        style="background-image: white; "></i>
-                    <h4>Cerrar sesion</h4>
-                </div>
-            </a>
-        </div>
+  <header>
+    <div class="icon__menu">
+      <i class="fas fa-bars" href="/index" id="btn_open"></i>
     </div>
+  </header>
+  <div class="menu__side" id="menu_side">
+    <div class="name__page">
+      <img src="resources/img/Logo3.png" width="50" />
+      <h5>Advance Travel</h5>
+    </div>
+    <div class="options__menu">
+      <a href="/index">
+        <div class="option">
+          <i class="fas fa-home" title="Inicio"></i>
+          <h4>Inicio</h4>
+        </div>
+      </a>
+      <a href="/adminrutas">
+        <div class="option">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h4>Administrar horarios</h4>
+        </div>
+      </a>
+      <a href="/usuarios">
+        <div class="option">
+          <i class="fa-solid fa-users" title="usuarios"></i>
+          <h4>Usuarios</h4>
+        </div>
+      </a>
+      <a href="/perfil">
+        <div class="option">
+          <i class="fa-solid fa-user" title="Perfil"></i>
+          <h4>Perfil</h4>
+        </div>
+      </a>
+      <a href="/logout">
+        <div class="option">
+          <i class="fa-solid fa-arrow-right-from-bracket" title="Cerrar sesion" style="background-image: white; "></i>
+          <h4>Cerrar sesion</h4>
+        </div>
+      </a>
+    </div>
+  </div>
 
-    <main>
-        <form action="/signup" method="post">
-        <h1 style="text-align: center;">Crear Usuario</h1>
-            </br>
-        <CENTER> 
-                <table id="cuerpoo" CELLPADDING=15 CELLSPACING=15 WIDTH="50%">
+  <main>
+    <form action="/signup" method="post">
+      <h1 style="text-align: center;">Crear Usuario</h1>
+      </br>
+      <CENTER>
+        <table id="cuerpoo" CELLPADDING=15 CELLSPACING=15 WIDTH="50%">
+          <tr>
+            <td>
+              </br>
+              </br>
+              <center>
+                <table WIDTH="75%">
+                  <tr>
+                    <td>
+                      <label for="user">Nombre de Usuario</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="text" id="user" name="user" required>
+                    </td>
+                  </tr>
+                </table>
+                <table WIDTH="75%">
+                  <tr>
+                    <td>
+                      </br>
+                      <label for="email">Correo</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="email" id="email" name="email" required>
+                    </td>
+                  </tr>
+                </table>
+                <table WIDTH="75%">
+                  <tr>
+                    <td>
+                      </br>
+                      <label for="pass">Contraseña</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td WIDTH="40%">
+                      <input type="password" id="pass" name="password" required>
+                    </td>
+                  </tr>
+                </table>
+
+                <table WIDTH="75%">
+                  <tr>
+                    <td>
+                      </br>
+                      <label for="text">Tipo de usuario</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td WIDTH="40%">
+                      <select id="rol" name="typ" required>
+                        <option>Seleccione rol</option>
+                        <option>Administrador</option>
+                        <option>Cliente</option>
+                        <option>Vendedor</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+                <center>
+                  <table WIDTH="75%">
                     <tr>
-                        <td>
-                            </br>
-                            </br>
-                            <center>
-                                <table WIDTH="75%">
-                                    <tr>
-                                        <td>
-                                            <label for="user">Nombre de Usuario</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="text" id="user" name="user" required>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table WIDTH="75%">
-                                    <tr>
-                                        <td>
-                                            </br>
-                                            <label for="email">Correo</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="email" id="email" name="email" required>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table WIDTH="75%">
-                                    <tr>
-                                        <td>
-                                            </br>
-                                            <label for="pass">Contraseña</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td WIDTH="40%">
-                                          <input type="password" id="pass" name="password" required>
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <table WIDTH="75%">
-                                    <tr>
-                                        <td>
-                                            </br>
-                                            <label for="text">Tipo de usuario</label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td WIDTH="40%">
-                                            <select id="rol" name="typ" required>
-                                                <option>Seleccione rol</option>
-                                                <option>Administrador</option>
-                                                <option>Cliente</option>
-                                                <option>Vendedor</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <center>
-                                    <table WIDTH="75%">
-                                        <tr>
-                                            </br>
-                                            <td>
-                                                <center>
-                                                    <button id="Update">
-                                                        <h2>Registrar</h2>
-                                                    </button>
-                                                </center>
-                                            </td>
-                                            <td>
-                                                <center>
-                                                    <a href="/usuarios">
-                                                    <button id="Cancel" >
-                                                        <h2>Cancel</h2>
-                                                    </button>
-                                                    </a>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </center>
-                            </center>
-                            </br>
-                            </br>
-                        </td>
+                      </br>
+                      <td>
+                        <center>
+                          <button id="Update">
+                            <h2>Registrar</h2>
+                          </button>
+                        </center>
+                      </td>
+                      <td>
+                        <center>
+                          <a href="/usuarios">
+                            <button id="Cancel">
+                              <h2>Cancel</h2>
+                            </button>
+                          </a>
+                        </center>
+                      </td>
                     </tr>
-                </table> 
-        </CENTER>
-        </form>
-    </main>
-    <script src="resources/css/script.js"></script>
+                  </table>
+                </center>
+              </center>
+              </br>
+              </br>
+            </td>
+          </tr>
+        </table>
+      </CENTER>
+    </form>
+  </main>
+  <script src="resources/css/script.js"></script>
 </body>
 
 </html>

@@ -5,17 +5,17 @@ const botonCartagena = document.getElementById("cartagena_");
 const botonBarranquila = document.getElementById("barranquilla_");
 
 botonMedellin.addEventListener("click", function() {
-    window.location.href = "/Medellin";    
+    window.location.href = "/ruta_Medellin";    
 });
 
 botonCali.addEventListener("click", function(){
-    window.location.href = "/Cali";    
+    window.location.href = "/ruta_Cali";    
 });
 
 botonCartagena.addEventListener("click", function() {
-    window.location.href = "/Cartagena";    
+    window.location.href = "/ruta_Cartagena";    
 });
 
 botonBarranquila.addEventListener("click", function() {
-    window.location.href = "/Barranquilla";    
+    window.location.href = "/ruta_Barranquilla";    
 });
