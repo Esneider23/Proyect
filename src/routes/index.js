@@ -66,7 +66,6 @@ router.get('/Crear_rutas', isAuthenticated, async (req, res)=>
 
 router.get('/ruta_:origen', async (req, res)=>{
     const rutas = await Ruta.find({origen: req.params.origen})
-    console.log(rutas);
     res.render('rutas_existentes', {rutas, origen: req.params.origen});
 })
 
