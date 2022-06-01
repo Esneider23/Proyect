@@ -1,0 +1,104 @@
+
+
+body {
+    background-color: #d9d9d9;
+}
+
+h1 {
+    color: #2c333a;
+    margin: 20px;
+    border-bottom: solid 3px #2c333a;
+}
+
+.container {
+    height: calc(100vh - 159px);
+    width: auto;
+    margin: 20px 10%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+#placa {
+    text-align: left;
+    margin: 20px 0 0 0;
+
+}
+
+.container h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.derecha {
+    margin: 30px;
+    width: 50%;
+}
+
+.izquierda img {
+    border-radius: 10px;
+}
+
+.sub_derecha {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.datos_tiquete_izquierda {
+    width: 40%;
+}
+.datos_tiquete_derecha {
+    width: 60%;
+}
+
+.izquierda {
+    margin: 30px;
+    width: 35%;
+}
+
+.izquierda h3{
+    margin-top: 30px;
+}
+
+.izquierda input {
+    height: 50px;
+    width: 30%;
+    text-align: center;
+    font-size: 25px;
+    margin: 20px 30%;
+}
+
+.comprar_tiquete {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0 0 0;
+}
+
+.comprar_tiquete h2{
+    margin: 20px 40px 0 0;
+}
+
+.comprar_tiquete button {
+    margin: -15 0 0 90%;
+    height: 70px;
+    width: 30%;
+    background-color: rgb(127, 255, 0);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.comprar_tiquete button:hover {
+    background-color: rgb(79, 155, 4);
+    color: white;
+}

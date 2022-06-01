@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Travel</title>
+  <link rel="stylesheet" href="resources/css/barranav.css">
+  <link rel="stylesheet" href="resources/css/footer.css">
+  <link rel="stylesheet" href="resources/css/comprar_tiquete.css">
+  <link rel="icon" href="resources/img/Logo3.png">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="resources/css/barranav.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li class="navbar-logo" padding="0" margin="0">
+        <a href="/">
+          <img id="nav-logo" src="resources/img/Logo3.png" alt="" width="auto" height="58">
+        </a>
+      </li>
+
+      <li class="navbar-toggle"><i class="fas fa-bars"></i></li>
+      <li class="navbar-links" id="inicio_">Inicio</li>
+      <li class="navbar-links" id="rutas_">Rutas</li>
+      <li class="navbar-links" id="login_">Log In</li>
+    </ul>
+  </nav>
+
+  <h1>Destino: Cartagena</h1>
+  <div class="container">
+    <div class="izquierda">
+      <img src="resources/img/cartagena.png" alt="" width="100%" height="auto">
+      <h3>Cantidad de boletas:</h3>
+      <input type="number" name="cantidad_boletas" id="cant_boletas" min="1" max="5" value="1">
+    </div>
+    <div class="derecha">
+      <div class="sub_derecha">
+        <div class="datos_tiquete_izquierda">
+          <h4>Lugar de salida</h4>
+          <p>Cali</p>
+          <br>
+          <h4>Lugar de llagada</h4>
+          <p>Cartagena</p>
+          <br>
+          <h4>Información del bus:</h4>
+          <p id="placa"><b>Placa:</b> RKS-324</p>
+        </div>
+        <div class="datos_tiquete_derecha">
+          <h4>Fecha de salida</h4>
+          <p>12/03/2022 09:32 PM</p>
+          <br>
+          <h4>Fecha de llegada</h4>
+          <p>12/03/2022 09:32 PM</p>
+          <br>
+          <h4>Valor unidad:</h4>
+          <h2>349.333 COP</h2>
+        </div>
+      </div>
+      <div class="comprar_tiquete">
+        <h4>Total:</h4>
+          <h2>349.333 COP</h2>
+          <button type="submit">
+            Comprar
+          </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <seccion id="seccion1">
+      <img src="resources/img/Logo3.png" alt="Logo">
+      <p>
+        Buses S.A. Empresa de servico de transporte de buces desde hace muchos años.
+      </p>
+      <p>
+        Vigilado Super intendencia de transporte y el gobierno ncional.
+      </p>
+      <ul id="ul-footer">
+        <li class="li-footer"><a
+            href="https://www.facebook.com/Advance-Travel-105207552205595/photos/?ref=page_internal">
+            <img src="resources/img/facebook.png" alt="Logo de facebook" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="https://www.instagram.com/advancestravel/">
+            <img src="resources/img/instagram.png" alt="Logo de Instagram" class="icon_social_media">
+          </a>
+        </li>
+        <li class="li-footer">
+          <a href="https://twitter.com/ESNEIDERGUZMA11">
+            <img src="resources/img/twitter.png" alt="Logo de twitter" class="icon_social_media">
+          </a>
+        </li>
+      </ul>
+    </seccion>
+    <seccion id="seccion2">
+      <h3 class="footer_title"><b>Contacto</b></h3>
+      <p>Atencion al cliente: <br>
+        655332773 <br>
+        3008666628 - 3118948832 <br>
+        atencionbuses@buses.com <br>
+      </p>
+      <p>
+        Contacto negocios: <br>
+        848999390 <br>
+        311777788 - 317784888888 <br>
+        negociosbusesas@buses.com
+      </p>
+    </seccion>
+    <seccion id="seccion3">
+      <h3 class="footer_title"><b>Donde estamos</b></h3>
+      <p>Colombia - Cartagena. <br>
+        Transersal 99 - Avenida Sherman <br>
+        Wallaby 72 <br>
+      </p>
+      <p>
+        Colombia - Bogota.
+        Cra.#78-34 San Fernando - 31 <br>
+      </p>
+      <p>
+        Colombia - Cali. <br>
+        Cra.#81-33 al frente de la casa <br>
+        de carlos.
+      </p>
+    </seccion>
+    <seccion id="seccion4">
+      <h3 class="footer_title"><b>Redes Sociales</b></h3>
+      <p>Facebook: Buses SA <br>
+        Intagram: @Buses_SA <br>
+        twitter: @Buses_SA
+      </p>
+    </seccion>
+    <div class="clearfix"></div>
+    <center>
+      <div id="ultimo">
+        <p id="pe">
+          Buses 2022 &copy;
+        </p>
+      </div>
+    </center>
+  </footer>
+</body>
+
+</html>

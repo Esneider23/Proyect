@@ -52,6 +52,10 @@ router.get('/compra',(req,res)=>{
     res.render('compra');
 })
 
+router.get('/comprar_tiquete',(req,res)=>{
+    res.render('comprar_tiquete');
+})
+
 router.get('/actualizarA_:id', isAuthenticated, async (req,res)=>
 {
     const user = await User.findById(req.params.id);
