@@ -56,7 +56,6 @@ body {
     bottom: 0;
     left: 0;
     text-align: center;
-
 }
 
 .carousel__button {
@@ -104,32 +103,36 @@ body {
 
 .scroller::-webkit-scrollbar-track
 {
-	border-radius: 10px;
-	background-color: #F5F5F5;
+  border-radius: 10px;
+  background-color: #F5F5F5;
 }
 
 .scroller::-webkit-scrollbar
 {
-	width: 12px;
-	background-color: #F5F5F5;
+  width: 12px;
+  background-color: #F5F5F5;
 }
 
 .scroller::-webkit-scrollbar-thumb
 {
-	border-radius: 10px;
-	background-color: #515151;
+  border-radius: 10px;
+  background-color: #515151;
 }
 
 .offer {
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #000000;
     padding: 10px;
     width: 200px;
     height: 150px;
     text-align: center;
     margin: 0 10px 20px 10px;
+    transition: .4s ease all;
     /*float: left; */
+}
+
+.offer:hover{
+    box-shadow: 0px 0px 11px #000000;
 }
 
 .img_offer {
@@ -160,14 +163,23 @@ body {
 
 .form-inicio {
     float: left;
-    background: #004aad;
     border-radius: 10px;
-    height: 350px;
-    width: 40%;
     margin-top: 20px;
-    margin-right: 100px;
+    margin-right: 50px;
+    width: 45%;
     padding: 30px;
+}
 
+#mapa{
+    height: 300px;
+    width: auto;
+    cursor: pointer;
+    transition: .4s ease all;
+}
+
+#mapa:hover{
+    border-radius: 13px;
+    box-shadow: 0px 0px 40px rgb(77, 77, 77);
 }
 
 .text-inicio {
@@ -201,12 +213,26 @@ label{
 
 @media (max-width: 1000px) {
     .form-inicio {
-        background: #004aad;
         border-radius: 10px;
-        width: 400px;
         margin: 20px 23%;
-        
-    
+        width: 100%;
+        margin: 0;
+    }
+
+    #mapa{
+        height: auto;
+        width: 60%;
+        text-align: center;
+        cursor: pointer;
+        transition: .4s ease all;
+    }
+
+inicio.css
+
+Jaider Castilla Utb
+#mapa:hover{
+        border-radius: 13px;
+        box-shadow: 0px 0px 40px rgb(77, 77, 77);
     }
     
     .text-inicio {
@@ -230,13 +256,23 @@ label{
 @media (max-width: 700px) {
     .form-inicio {
         float: left;
-        background: #004aad;
         border-radius: 10px;
         width: 80%;
         margin: 20px 0 0 10%;
-    
     }
-    
+
+    #mapa{
+        height: 300px;
+        width: auto;
+        cursor: pointer;
+        transition: .4s ease all;
+    }
+
+    #mapa:hover{
+        border-radius: 13px;
+        box-shadow: 0px 0px 40px rgb(77, 77, 77);
+    }
+
     .text-inicio {
         min-width: 190px;
         width: 100%;
@@ -259,10 +295,20 @@ label{
 @media (max-width: 526px) {
     .form-inicio {
         float: left;
-        background: #004aad;
         border-radius: 10px;
         width: 100%; 
         margin: 20px 0 0 0;   
     }
-}
 
+    #mapa{
+        height: 300px;
+        width: auto;
+        cursor: pointer;
+        transition: .4s ease all;
+    }
+
+    #mapa:hover{
+        border-radius: 13px;
+        box-shadow: 0px 0px 40px rgb(77, 77, 77);
+    }
+}

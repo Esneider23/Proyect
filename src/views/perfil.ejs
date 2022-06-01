@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advance Travel</title>
-    <link rel="icon" href="resources/img/Logo3.png">
-    <link rel="stylesheet" href="resources/css/estilos.css">
-    <link rel="stylesheet" href="resources/css/perfil.css">
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advance Travel</title>
+  <link rel="icon" href="resources/img/Logo3.png">
+  <link rel="stylesheet" href="resources/css/estilos.css">
+  <link rel="stylesheet" href="resources/css/perfil.css">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 </head>
+
 <body id="body">
-    
-    <header>
-        <div class="icon__menu">
-            <i class="fas fa-bars"  href="/index" id="btn_open"></i>
+
+  <header>
+    <div class="icon__menu">
+      <i class="fas fa-bars" href="/index" id="btn_open"></i>
+    </div>
+  </header>
+
+  <div class="menu__side" id="menu_side">
+
+    <div class="name__page">
+      <a href="/">
+        <img src="resources/img/Logo3.png" width="50" />
+      </a>
+      <h5>Advance Travel</h5>
+    </div>
+
+    <div class="options__menu">
+
+      <a href="/index">
+        <div class="option">
+          <i class="fas fa-home" title="Inicio"></i>
+          <h4>Inicio</h4>
         </div>
-    </header>
+      </a>
 
-    <div class="menu__side" id="menu_side">
-
-        <div class="name__page">
-            <a href="/">
-                <img src="resources/img/Logo3.png" width="50"/>
-            </a>
-            <h5>Advance Travel</h5>
+      <a href="/adminrutas">
+        <div class="option">
+          <i class="fa-solid fa-calendar-days"></i>
+          <h4>Administrar horarios</h4>
         </div>
+      </a>
 
-        <div class="options__menu">	
-
-            <a href="/index">
-                <div class="option">    
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <h4>Inicio</h4>
-                </div>
-            </a>
-            
-            <a href="/adminrutas">
-                <div class="option">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <h4>Administrar horarios</h4>
-                </div>
-            </a>
-
-            <a href="/usuarios">
-                <div class="option">
-                    <i class="fa-solid fa-users" title="usuarios"></i>
-                    <h4>Usuarios</h4>
-                </div>
-            </a>
-            <a href="/perfil" class="selected">
-                <div class="option">    
-                    <i class="fa-solid fa-user" title="Perfil"></i>
-                    <h4>Perfil</h4>
-                </div>
-            </a>
-
-            <a href="/logout">
-                <div class="option">
-                    <i class="fa-solid fa-arrow-right-from-bracket" title="Cerrar sesion" style="background-image: white; "></i>
-                    <h4>Cerrar sesion</h4>
-                </div>
-            </a>
-
+      <a href="/usuarios">
+        <div class="option">
+          <i class="fa-solid fa-users" title="usuarios"></i>
+          <h4>Usuarios</h4>
         </div>
+      </a>
+      <a href="/perfil" class="selected">
+        <div class="option">
+          <i class="fa-solid fa-user" title="Perfil"></i>
+          <h4>Perfil</h4>
+        </div>
+      </a>
+
+      <a href="/logout">
+        <div class="option">
+          <i class="fa-solid fa-arrow-right-from-bracket" title="Cerrar sesion" style="background-image: white; "></i>
+          <h4>Cerrar sesion</h4>
+        </div>
+      </a>
 
     </div>
-    <main>
-        <h1>Perfil</h1>
-        <div class="container">
-            <div class="column">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="face front-face">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="profile">
-                            <div class="pt-3 text-uppercase name">
-                                <%=user.name%>
-                            </div>
-                            <br>
-                            <div class="pt-3 text-uppercase name">
-                                <a class="button" href="/actualizar_<%=user._id%>">
-                                    Actualizar perfil
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+  </div>
+  <main>
+    <h1>Perfil</h1>
+    <div class="container">
+      <div class="column">
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="face front-face">
+              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="profile">
+              <div class="pt-3 text-uppercase name">
+                <%=user.name%>
+              </div>
+              <br>
+              <div class="pt-3 text-uppercase name">
+                <a class="button" href="/actualizar_<%=user._id%>">
+                  Actualizar perfil
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <script src="resources/css/script.js"></script>
+  <script src="resources/css/script.js"></script>
 </body>
-</html>
 
+</html>

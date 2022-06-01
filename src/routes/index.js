@@ -32,7 +32,6 @@ router.get('/perfil', isAuthenticated, (req,res)=>{
 
 router.get('/actualizar_:id', isAuthenticated, async(req,res)=>{
     const user = await User.findById(req.params.id);
-    console.log(user);
     res.render('actualizarp', {user});
 })
 
@@ -44,22 +43,18 @@ router.get('/usuarios', isAuthenticated, async (req,res)=>{
 })
 
 
-router.get('/destino',(req,res)=>{
-    res.render('destino');
-})
-
 router.get('/compra',(req,res)=>{
     res.render('compra');
 })
 
-router.get('/comprar_tiquete',(req,res)=>{
-    res.render('comprar_tiquete');
+router.get('/comprar_:id', async(req,res)=>{
+    const ruta = await Ruta.findById(req.params.id);
+    res.render('comprar_tiquete', {ruta});
 })
 
 router.get('/actualizarA_:id', isAuthenticated, async (req,res)=>
 {
     const user = await User.findById(req.params.id);
-    console.log(user);   
     res.render('actualizarA', {user});
 })
 
