@@ -68,6 +68,9 @@ router.get('/ruta_:origen', async (req, res)=>{
     res.render('rutas_existentes', {rutas, origen: req.params.origen});
 })
 
+router.get('/completar_compra',(req,res)=>{
+    res.render('formulario_pago');
+})
 
 
 router.post('/update_:id', controller.update);

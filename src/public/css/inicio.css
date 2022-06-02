@@ -100,6 +100,9 @@ body {
     column-gap: 1rem;
     overflow-x: auto;
 }
+.scroller a {
+    text-decoration: none;
+}
 
 .scroller::-webkit-scrollbar-track
 {
@@ -153,7 +156,7 @@ body {
 }
 
 .subtitle_offer {
-    margin: 0;
+    margin: 17px 0 0 0;
     font-size: 1.5em;
     font-weight: bold;
     color: #000000;

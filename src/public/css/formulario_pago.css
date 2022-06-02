@@ -1,0 +1,172 @@
+
+
+body {
+    background-color: #d9d9d9;
+}
+
+h1 {
+    color: #2c333a;
+    margin: 20px;
+    border-bottom: solid 3px #2c333a;
+}
+
+.container {
+    height: calc(100vh - 159px);
+    width: auto;
+    margin: 20px 10%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.izquierda {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+}
+
+.izquierda .izq_arriba p {
+    color: #2c333a;
+    font-size: 20px;
+    margin: 7px 0;
+}
+
+.izquierda .izq_arriba h2 {
+    font-size: 200%;
+    margin-bottom: 40px;
+
+}
+
+.izquierda .izq_arriba b {
+    color: black;
+}
+
+.izquierda .izq_abajo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: #2c333a;
+}
+
+.derecha {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.derecha p {
+    margin-top: 20px;
+    color: #626364;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#p_superior {
+    margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+.derecha .der_superior input {
+    width: 100%;
+    height: 40px;
+    background-color: #d9d9d9;
+    border: solid 1px #2c333a;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #2c333a;
+    margin-bottom: 20px;
+}
+
+.derecha .der_medio{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #2c333a;
+}
+
+.derecha .der_medio input{
+    width: 100%;
+}
+
+.derecha .der_medio .der_medio_derecha {
+    margin-left: 10px;
+}
+
+.derecha .der_medio .der_medio_derecha input{
+    width: 100%;
+    float: right;
+}
+
+.derecha .der_inferior {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #2c333a;
+}
+.derecha .der_inferior p {
+    font-size: 24px;
+}
+
+.derecha .der_inferior button {
+    width: 170px;
+    height: 50px;
+    margin-top: 9%;
+    background-color: #b8ed36;
+    border: none;
+    border-radius: 5px;
+    color: blacks;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.derecha .der_inferior button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #9fce28;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        height: auto;
+        margin: 20px;
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .izquierda {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .derecha {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
