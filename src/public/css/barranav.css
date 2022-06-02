@@ -72,6 +72,10 @@
     .active {
         display: block;
     }
+    
+    .actual-page {
+        background-color: rgba(67, 149, 255, 0.4);
+    }
 }
 
 .actual-page {
