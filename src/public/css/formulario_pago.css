@@ -64,6 +64,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .derecha p {
     margin-top: 20px;
     color: #626364;
