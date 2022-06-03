@@ -101,6 +101,7 @@ h1 {
 .comprar_tiquete button:hover {
     background-color: rgb(79, 155, 4);
     color: white;
+    cursor: pointer;
 }
 
 .container input
@@ -108,4 +109,14 @@ h1 {
     margin-top: 10px;
     text-align: center;
     border: transparent;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: black;
+}
+a:link{
+    color: black;
 }

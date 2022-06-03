@@ -29,54 +29,71 @@
       <li class="navbar-links" id="login_">Log In</li>
     </ul>
   </nav>
-
-  <h1>Completa la compra</h1>
-  <div class="container">
-    <div class="izquierda">
-      <div class="izq_arriba">
-        <h2>Datos de compra:</h2>
-        <p><b>Origen:</b> Cartagena</p>
-        <p><b>Fecha de salida:</b> 26/06/2022 - 9:20 PM</p>
-        <p><b>Destino:</b> Cali</p>
-        <p><b>Fecha de llegada:</b> 26/06/2022 - 10:30 PM</p>
-        <p><b>Cantidad de boletos:</b> 2</p>
-      </div>
-      <div class="izq_abajo">
-        <p>Al comprar usted acepta los terminos y condiciones de Advance Travel.</p>
-      </div>
-    </div>
-    <div class="derecha">
-      <div class="der_superior">
-        <p id="p_superior">Numero de Tarjeta:</p>
-        <input type="number">
-        <p>Nombre del propietario de la tarjeta:</p>
-        <input type="text">
-        
-        <div class="der_medio">
-          <div class="der_medio_izquierda">
-            <p>Fecha de expiración:</p>
-            <input type="month" name="fecha" id="fecha" class="form-control">
-            
-          </div>
-          <div class="der_medio_derecha">
-            <p>Codigo de seguridad</p>
-            <input type="number">
-          </div>
+  <form action="/pago_<%=ruta._id%>" method="post">
+    <h1>Completa la compra</h1>
+    <div class="container">
+      <div class="izquierda">
+        <div class="izq_arriba">
+          <h2>Datos de compra:</h2>
+          <p><b>Origen:</b>
+            <%=ruta.origen%>
+          </p>
+          <p id="ruta_salida"><b>Fecha de salida:</b>
+            <%=ruta.fecha_salida%> - <%=ruta.hsalida%>
+          </p>
+          <p><b>Destino:</b>
+            <%=ruta.destino%>
+          </p>
+          <p><b>Fecha de llegada:</b>
+            <%=ruta.fecha_llegada%> - <%=ruta.hllegada%>
+          </p>
+          <p><b>Cantidad de boletos:</b> 2</p>
+        </div>
+        <div class="izq_abajo">
+          <p>Al comprar usted acepta los terminos y condiciones de Advance Travel.</p>
         </div>
       </div>
-      
-      <div class="der_inferior">
-        <div>
-          <p>Total a pagar:</p>
-          <p>$600000 COP</p>
+      <div class="derecha">
+        <div class="der_superior">
+          <p id="p_superior">Numero de Tarjeta:</p>
+          <input type="number">
+          <p>Nombre del propietario de la tarjeta:</p>
+          <input type="text">
+
+          <p>correo electronico:</p>
+          <input type="email" name="email" id="email" placeholder="Email" value="" required>
+          
+          <div class="der_medio">
+            <div class="der_medio_izquierda">
+              <p>Fecha de expiración:</p>
+              <input type="month" name="fecha" id="fecha" class="form-control">
+
+            </div>
+            <div class="der_medio_derecha">
+              <p>Codigo de seguridad</p>
+              <input type="number">
+            </div>
+          </div>
         </div>
-        <button>Comprar</button>
+
+        <textarea hidden="hidden" id="mensaje" name="mensaje">
+          <%=ruta.fecha_llegada%> - <%=ruta.hllegada%>
+         
+        </textarea>
+
+        <div class="der_inferior">
+          <div>
+            <p>Total a pagar:</p>
+            <p></p>
+          </div>
+
+          <button type="submit">Comprar</button>
+
+        </div>
+
       </div>
-
-
-
     </div>
-  </div>
+  </form>
 
   <footer>
     <seccion id="seccion1">
@@ -151,6 +168,21 @@
       </div>
     </center>
   </footer>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <%if(typeof alert != "undefined"){%>
+      <script>
+          Swal.fire({
+              title:'<%= alertTitle %>',
+              text:'<%= alertMessage %>',
+              icon:'<%= alertIcon  %>',
+              showConfirmButton:'<%= ShowConfirmButton  %>',
+              timer:'<%= timer %>'
+          }).then(()=>{
+              window.location='<%= ruta  %>'
+          })
+      </script>
+  <%}%>
 </body>
 
 </html>

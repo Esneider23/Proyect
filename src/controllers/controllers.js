@@ -1,8 +1,8 @@
 const User = require('../models/User');
 const passport = require('passport');
 const Rutas = require('../models/Rutas');
-const moment = require('moment');
-const fecha = require('../models/Rutas');
+const nodemailer = require('nodemailer');
+const { google } = require("googleapis");
 
 exports.Signup = async (req, res)=>{
    const name = req.body.user;
@@ -65,4 +65,53 @@ exports.delteruta = async(req,res)=>
 {
     await Rutas.findByIdAndDelete(req.params.id);
     res.redirect('/adminrutas')
+}
+
+exports.send_menssage = (req,res) =>{
+    const email = req.body.email;
+    const menssag = req.body.mensaje; 
+    contentHtmml  =  `
+    <h1>Reporte de su compra</h1>
+    <ul>
+        ${menssag}
+    </ul>
+`;
+    
+   var transporter = nodemailer.createTransport(
+        {
+            service: 'outlook',
+            auth: {
+                user: 'advance_travel@outlook.com',
+                pass: 'AdvanceTravel23'
+            }
+        }
+    )
+    var menssage = menssag;
+    var mailOptions = 
+    {
+        from: 'advance_travel@outlook.com',
+        to: email,
+        subject: 'Asunto del correo',
+        html: contentHtmml,
+    }
+
+    transporter.sendMail(mailOptions, (error, info)=>{
+        if(error)
+        {
+            console.log(error);
+        }
+        else{
+            res.render('formulario_pago',{
+                alert:true,
+                alertTitle: "Compra exitosa",
+                alertMessage: "Su compra se genero con exito dirijase a su correo para tener toda la información necesaria",
+                alertIcon: 'success',
+                ShowConfirmButton:false,
+                timer: 1000,
+                ruta:'/'
+            })
+
+            console.log('Email enviado: ' + info.response);
+        }
+    })
 }

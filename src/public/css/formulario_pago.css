@@ -11,7 +11,7 @@ h1 {
 }
 
 .container {
-    height: calc(100vh - 159px);
+    height: calc(100vh - 90px);
     width: auto;
     margin: 20px 10%;
     padding: 20px;
@@ -130,7 +130,7 @@ input[type=number]::-webkit-inner-spin-button {
 .derecha .der_inferior button {
     width: 170px;
     height: 50px;
-    margin-top: 9%;
+    margin-top: 4%;
     background-color: #b8ed36;
     border: none;
     border-radius: 5px;

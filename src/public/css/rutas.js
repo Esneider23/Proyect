@@ -2,6 +2,7 @@ const botonMedellin = document.getElementById('medellin_');
 const botonCali = document.getElementById("cali_");
 const botonCartagena = document.getElementById("cartagena_");
 const botonBarranquila = document.getElementById("barranquilla_");
+const botonPago = document.getElementById("pago_");
 
 botonMedellin.addEventListener("click", function() {
     window.location.href = "/ruta_Medellin";    
@@ -19,3 +20,7 @@ botonBarranquila.addEventListener("click", function() {
     window.location.href = "/ruta_Barranquilla";    
 });
 
+botonPago.addEventListener("click", function()
+{
+    window.location.href = "/ruta_Barranquilla";
+});

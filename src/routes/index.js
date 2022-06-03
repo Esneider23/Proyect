@@ -63,6 +63,12 @@ router.get('/Crear_rutas', isAuthenticated, async (req, res)=>
     res.render('registrar_rutas');
 })
 
+router.get('/pago_:id', async (req,res)=>
+{
+    const ruta = await Ruta.findById(req.params.id)   
+    res.render('formulario_pago',{ruta, valor:req.params.valor});
+})
+
 router.get('/ruta_:origen', async (req, res)=>{
     const rutas = await Ruta.find({origen: req.params.origen})
     res.render('rutas_existentes', {rutas, origen: req.params.origen});
@@ -77,5 +83,6 @@ router.post('/update_:id', controller.update);
 router.post('/delete_:id', controller.delete);
 router.post('/CreateRuta', controller.Createrute);
 router.post('/delteruta_:id',controller.delteruta);
+router.post('/pago_:id', controller.send_menssage);
 
 module.exports = router;
