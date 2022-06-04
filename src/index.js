@@ -5,14 +5,13 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
 const config = require('./config.js');
-const fs = require('fs');
-const qrcode = require('qrcode');
+
 
 //Initialiazaions
 const app = express();
 require('./database');
 require('./config/passport');
-run();
+
 
 //Setings
 app.set('port', config.port)

@@ -77,14 +77,32 @@
         </div>
 
         <textarea hidden="hidden" id="mensaje" name="mensaje">
-          <%=ruta.fecha_llegada%> - <%=ruta.hllegada%>
-         
+          <h2>Datos de compra:</h2>
+          <p><b>Origen:</b>
+            <%=ruta.origen%>
+          </p>
+          <p id="ruta_salida"><b>Fecha de salida:</b>
+            <%=ruta.fecha_salida%> - <%=ruta.hsalida%>
+          </p>
+          <p><b>Destino:</b>
+            <%=ruta.destino%>
+          </p>
+          <p><b>Fecha de llegada:</b>
+            <%=ruta.fecha_llegada%> - <%=ruta.hllegada%>
+          </p>
+          <p><b>Cantidad de boletos:</b> 2</p>
+
+          <div class="der_inferior">
+            <div>
+              <p>Pago Realizado: $40000</p>
+            </div>
+          </div>
         </textarea>
 
         <div class="der_inferior">
           <div>
             <p>Total a pagar:</p>
-            <p></p>
+            <b>$40000</b>
           </div>
 
           <button type="submit">Comprar</button>
