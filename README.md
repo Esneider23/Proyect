@@ -14,3 +14,6 @@ Links de soporte del proyecto
 <li>
   Video de presentación del proyecto: https://tecnoutb-my.sharepoint.com/:v:/g/personal/guzmane_utb_edu_co/EXSyDGPTKbpDmONgyxgEuqYBaBA0IQnuStjtyvZEAH5hmw?e=WdwmiA
  </li>
+<li>
+  Documento del caso de estudio: https://github.com/Esneider23/Proyect/blob/main/Proyecto%20final%20desarrollo%20de%20software.pdf
+</li>
